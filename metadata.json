@@ -1,0 +1,6 @@
+{
+  "name": "EV Telemetry Lab - Battery Strain & Digital Twin Cockpit",
+  "description": "Next-generation electric vehicle telemetry lab featuring real-time battery strain diagnostics, aerodynamic digital twin radar, chaos injection simulation, and predictive safety envelope analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

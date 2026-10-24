@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-secondary-fixed-variant": "#005236", "primary-fixed": "#6ff6ff", "on-tertiary-fixed": "#2a1700", "on-primary-container": "#006a70", "outline-variant": "#3a494b", "surface": "#10131a", "inverse-on-surface": "#2d3038", "tertiary-fixed-dim": "#ffb95f", "on-tertiary-container": "#875400", "surface-container-high": "#272a32", "inverse-primary": "#00696f", "secondary": "#4edea3", "inverse-surface": "#e1e2ec", "on-surface": "#e1e2ec", "surface-container-low": "#191b23", "on-secondary-container": "#00311f", "surface-tint": "#00dce6", "surface-container": "#1d1f27", "on-secondary-fixed": "#002113", "on-error": "#690005", "tertiary": "#fff5ee", "on-tertiary-fixed-variant": "#653e00", "on-error-container": "#ffdad6", "on-tertiary": "#472a00", "error": "#ffb4ab", "secondary-container": "#00a572", "tertiary-container": "#ffd3a1", "surface-container-lowest": "#0b0e15", "on-surface-variant": "#b9cacb", "secondary-fixed": "#6ffbbe", "primary-fixed-dim": "#00dce6", "surface-dim": "#10131a", "error-container": "#93000a", "surface-bright": "#363941", "outline": "#849495", "tertiary-fixed": "#ffddb8", "on-primary-fixed": "#002022", "secondary-fixed-dim": "#4edea3", "primary": "#e0fdff", "surface-container-highest": "#32353d", "on-primary": "#00373a", "on-primary-fixed-variant": "#004f53", "on-background": "#e1e2ec", "primary-container": "#00f2fe", "background": "#10131a", "on-secondary": "#003824", "surface-variant": "#32353d" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "space-md": "1rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "space-xl": "2.5rem", "margin-desktop": "2rem", "margin": "1rem", "gutter": "1rem", "gutter-desktop": "1.5rem" }, fontFamily: { "telemetry-xl": ["JetBrains Mono"], "headline-lg": ["Space Grotesk"], "body-sm": ["Inter"], "display-lg": ["Space Grotesk"], "body-lg": ["Inter"], "headline-md": ["Space Grotesk"], "telemetry-sm": ["JetBrains Mono"], "body-md": ["Inter"], "telemetry-md": ["JetBrains Mono"], "label-caps": ["JetBrains Mono"], "display-lg-mobile": ["Space Grotesk"], "headline-sm": ["Space Grotesk"] }, fontSize: { "telemetry-xl": ["36px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700" }], "headline-lg": ["30px", { lineHeight: "38px", letterSpacing: "-0.02em", fontWeight: "600" }], "body-sm": ["12px", { lineHeight: "18px", fontWeight: "400" }], "display-lg": ["48px", { lineHeight: "56px", letterSpacing: "-0.03em", fontWeight: "700" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }], "headline-md": ["22px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600" }], "telemetry-sm": ["13px", { lineHeight: "16px", fontWeight: "500" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }], "telemetry-md": ["18px", { lineHeight: "24px", fontWeight: "600" }], "label-caps": ["11px", { lineHeight: "14px", letterSpacing: "0.12em", fontWeight: "600" }], "display-lg-mobile": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700" }], "headline-sm": ["18px", { lineHeight: "24px", fontWeight: "600" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface antialiased min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_16px_rgba(0,242,254,0.06)]"><div class="h-20 px-space-md flex flex-col justify-between py-space-xs"><div class="flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="EV Intelligence Telemetry Emblem" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WoFiW6rtSjSD_m2iyq9Sga0Sr94lnAJai7JZUyJ48G9l9HrtrH37q15xjRl3K4SM8m-33KgCosYfqZ-VAc0R1NWh3CM5ROtCv_MvddeqiG5BpNx7V1C_EpRE8ldm5FNEl8ROdW685-r1_UGmxIQ6dExtKd3k-7tR08gnzkuhKQmozBQNUpzYQsFPxaZ0ButlfaT3EJg_WGcwAord4zlezm1jV_pNCcDyR7p5ntUBObrNDYRNj406Hl3B5L"/><div class="flex flex-col"><span class="font-label-caps text-label-caps text-primary-container tracking-widest uppercase">EV TELEMETRY LAB</span><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">Hud Vehicle Stage</span></div></div><div class="flex items-center gap-space-sm"><div class="hidden sm:flex items-center gap-1.5 px-space-xs py-0.5 rounded bg-surface-container-high/60"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span><span class="font-label-caps text-label-caps text-secondary uppercase">LINK ACTIVE</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="flex items-center justify-between gap-space-xs overflow-x-auto no-scrollbar"><div class="flex items-center gap-1.5 shrink-0"><span class="px-1.5 py-0.5 rounded bg-surface-container-high font-label-caps text-label-caps text-secondary flex items-center gap-1"><span class="w-1 h-1 rounded-full bg-secondary"></span>READY</span><span class="px-1.5 py-0.5 rounded bg-surface-container-high font-label-caps text-label-caps text-on-surface-variant">2Hz TICK</span><span class="px-1.5 py-0.5 rounded bg-surface-container-high font-label-caps text-label-caps text-primary-container">PRESET: ALPHA_WLTP</span></div><div class="flex items-center gap-1 bg-surface-container-lowest/80 p-0.5 rounded shrink-0"><button class="px-2 py-0.5 font-label-caps text-label-caps rounded bg-primary-container text-on-primary-container font-bold min-h-[24px]">1X</button><button class="px-2 py-0.5 font-label-caps text-label-caps rounded text-on-surface-variant hover:text-on-surface min-h-[24px]">4X</button><button class="px-2 py-0.5 font-label-caps text-label-caps rounded text-on-surface-variant hover:text-on-surface min-h-[24px]">10X</button></div></div></div></header><main class="flex flex-col relative w-full bg-surface pt-20 pb-20"><div class="flex flex-col w-full px-space-md py-space-sm gap-space-md">
+<!-- TOP SIMULATION CONTROLLER BAR -->
+<section class="bg-surface-container/90 rounded-xl p-space-sm shadow-xl flex flex-col gap-space-sm backdrop-blur-xl">
+<div class="flex items-center justify-between gap-space-xs">
+<!-- Mode Toggle -->
+<div class="flex items-center p-0.5 bg-surface-container-lowest rounded-lg">
+<button class="px-2.5 py-1 rounded font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface transition-colors" id="btn-mode-manual">MANUAL</button>
+<button class="px-2.5 py-1 rounded bg-primary-container text-on-primary-container font-label-caps text-label-caps font-bold shadow-md shadow-primary-container/20" id="btn-mode-scenario">SCENARIO</button>
+</div>
+<!-- Play / Pause Main Trigger -->
+<button class="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-surface-container-high hover:bg-surface-bright text-secondary transition-all active:scale-95 shadow-sm" id="btn-sim-play">
+<span class="material-symbols-outlined text-[16px] text-secondary" id="sim-play-icon" style="font-variation-settings: 'FILL' 1;">pause</span>
+<span class="font-label-caps text-label-caps uppercase" id="sim-play-text">RUNNING</span>
+</button>
+<!-- Sync Chip -->
+<div class="flex items-center gap-1 px-2 py-1 rounded bg-surface-container-lowest">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></span>
+<span class="font-label-caps text-[10px] text-secondary">2Hz SYNC</span>
+</div>
+</div>
+<!-- Scenario Dropdown & Tick Speeds -->
+<div class="flex items-center justify-between gap-space-xs pt-1">
+<div class="relative flex-1 min-w-0">
+<select class="w-full bg-surface-container-lowest text-primary font-telemetry-sm text-telemetry-sm rounded px-2.5 py-1.5 appearance-none focus:outline-none focus:ring-0 truncate pr-6 cursor-pointer" id="scenario-selector">
+<option selected="" value="alpine">Alpine Freeze Ascent (-4°C)</option>
+<option value="runaway">Thermal Runaway Stress (+48°C)</option>
+<option value="urban">Urban Stop-and-Go (Low Speed)</option>
+<option value="hypermile">Highway Hyper-miling (90km/h)</option>
+</select>
+<span class="material-symbols-outlined absolute right-1.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[16px] pointer-events-none">expand_more</span>
+</div>
+<!-- Multiplier Mini Chips -->
+<div class="flex items-center gap-1 bg-surface-container-lowest p-0.5 rounded shrink-0">
+<button class="px-2 py-1 font-label-caps text-[10px] rounded bg-primary-container text-on-primary-container font-bold">1X</button>
+<button class="px-2 py-1 font-label-caps text-[10px] rounded text-on-surface-variant hover:text-on-surface">4X</button>
+<button class="px-2 py-1 font-label-caps text-[10px] rounded text-on-surface-variant hover:text-on-surface">10X</button>
+</div>
+</div>
+</section>
+<!-- SAFETY HUD COCKPIT DISPLAY -->
+<section class="bg-surface-container/90 rounded-xl p-space-md shadow-xl flex flex-col gap-space-sm backdrop-blur-xl relative overflow-hidden">
+<!-- Panel Header Micro-HUD -->
+<div class="flex items-center justify-between pb-1">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary-container text-[18px]">speed</span>
+<span class="font-label-caps text-label-caps text-primary-container uppercase tracking-wider">// HUD_VELOCITY_COCKPIT</span>
+</div>
+<div class="flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container-lowest">
+<span class="font-label-caps text-[10px] text-tertiary-fixed-dim">RECOM: 82 KM/H</span>
+</div>
+</div>
+<!-- Dual Instrument Cluster: Speed Arc + Risk Ring -->
+<div class="grid grid-cols-2 gap-space-sm items-center py-1">
+<!-- Arc Speedometer -->
+<div class="flex flex-col items-center justify-center relative bg-surface-container-lowest/80 rounded-xl p-space-sm">
+<svg class="w-36 h-28 overflow-visible" viewbox="0 0 160 120">
+<defs>
+<lineargradient id="speedTrackGrad" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" stop-color="#3a494b" stop-opacity="0.3"></stop>
+<stop offset="100%" stop-color="#3a494b" stop-opacity="0.6"></stop>
+</lineargradient>
+<lineargradient id="recomGreenGrad" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" stop-color="#4edea3" stop-opacity="0.8"></stop>
+<stop offset="100%" stop-color="#6ffbbe" stop-opacity="1"></stop>
+</lineargradient>
+<lineargradient id="speedArcGrad" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" stop-color="#00dce6"></stop>
+<stop offset="70%" stop-color="#00f2fe"></stop>
+<stop offset="100%" stop-color="#ffb95f"></stop>
+</lineargradient>
+</defs>
+<!-- Gauge Background Track (180 to 0 deg) -->
+<path d="M 20 105 A 60 60 0 0 1 140 105" fill="none" stroke="url(#speedTrackGrad)" stroke-linecap="round" stroke-width="10"></path>
+<!-- Green Recommended Target Zone Arc (approx 75-90 km/h) -->
+<path d="M 52 46 A 60 60 0 0 1 88 45" fill="none" stroke="url(#recomGreenGrad)" stroke-linecap="butt" stroke-width="12"></path>
+<!-- Dynamic Actual Speed Arc (114 km/h -> ~63% of 180 km/h max) -->
+<path d="M 20 105 A 60 60 0 0 1 126 62" fill="none" id="hud-speed-arc" stroke="url(#speedArcGrad)" stroke-linecap="round" stroke-width="8"></path>
+<!-- Speed Target Tick -->
+<circle class="animate-pulse" cx="70" cy="45" fill="#6ffbbe" r="3"></circle>
+</svg>
+<!-- Speed Readout Overlay -->
+<div class="absolute bottom-2 flex flex-col items-center">
+<div class="flex items-baseline gap-0.5">
+<span class="font-telemetry-xl text-telemetry-xl text-primary font-black tracking-tight leading-none" id="val-speed-display">114</span>
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase">KM/H</span>
+</div>
+<span class="font-label-caps text-[9px] text-secondary mt-0.5">OPTIMAL BAND: 82</span>
+</div>
+</div>
+<!-- Segmented Dynamic Risk Ring Gauge -->
+<div class="flex flex-col items-center justify-center relative bg-surface-container-lowest/80 rounded-xl p-space-sm">
+<svg class="w-32 h-28 overflow-visible" viewbox="0 0 140 120">
+<defs>
+<filter height="140%" id="glow-amber" width="140%" x="-20%" y="-20%">
+<fegaussianblur result="blur" stddeviation="3"></fegaussianblur>
+<fecomposite in="SourceGraphic" in2="blur" operator="over"></fecomposite>
+</filter>
+</defs>
+<!-- Background Base Ring -->
+<circle cx="70" cy="60" fill="none" r="44" stroke="#272a32" stroke-dasharray="3 3" stroke-width="7"></circle>
+<!-- Segmented caution indicator: Score 68 / 100 -->
+<circle cx="70" cy="60" fill="none" filter="url(#glow-amber)" id="hud-risk-ring" r="44" stroke="#ffb95f" stroke-dasharray="276" stroke-dashoffset="88" stroke-linecap="round" stroke-width="8" transform="rotate(-90 70 60)"></circle>
+<!-- Segment markers around circumference -->
+<line stroke="#4edea3" stroke-width="2" x1="70" x2="70" y1="10" y2="16"></line>
+<line stroke="#ffb95f" stroke-width="2" x1="114" x2="108" y1="60" y2="60"></line>
+<line stroke="#ffb4ab" stroke-width="2" x1="70" x2="70" y1="110" y2="104"></line>
+<line stroke="#00f2fe" stroke-width="2" x1="26" x2="32" y1="60" y2="60"></line>
+</svg>
+<!-- Dynamic Risk Score Text -->
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="font-label-caps text-[9px] text-on-surface-variant uppercase tracking-wider">RISK INDEX</span>
+<span class="font-telemetry-md text-telemetry-md text-tertiary-fixed-dim font-black leading-tight" id="val-risk-display">68/100</span>
+<span class="px-1.5 py-0.2 rounded bg-tertiary-fixed-dim/20 font-label-caps text-[9px] text-tertiary-fixed-dim uppercase font-bold mt-0.5">CAUTION</span>
+</div>
+</div>
+</div>
+<!-- Prominent Recommendation Action Banner -->
+<div class="flex items-center gap-space-sm bg-tertiary-container/15 text-tertiary-fixed-dim p-space-sm rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-[20px] text-tertiary-fixed-dim shrink-0 animate-pulse">warning</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-caps text-[10px] text-tertiary-fixed-dim uppercase tracking-wider font-bold">TACTICAL INTERVENTION REQUIRED</span>
+<span class="font-telemetry-sm text-[12px] text-on-surface truncate font-semibold">REDUCE TO 82 KM/H · PREVENT PACK OVERHEATING</span>
+</div>
+</div>
+<!-- Quick Telemetry Micro Badges -->
+<div class="grid grid-cols-4 gap-1.5 pt-0.5">
+<div class="flex flex-col items-center bg-surface-container-lowest p-1.5 rounded">
+<span class="font-label-caps text-[9px] text-on-surface-variant">PACK SOC</span>
+<span class="font-telemetry-sm text-telemetry-sm text-primary-fixed-dim font-bold mt-0.5">64%</span>
+</div>
+<div class="flex flex-col items-center bg-surface-container-lowest p-1.5 rounded">
+<span class="font-label-caps text-[9px] text-tertiary-fixed-dim">PACK TEMP</span>
+<span class="font-telemetry-sm text-telemetry-sm text-tertiary-fixed-dim font-bold mt-0.5">42.8°C</span>
+</div>
+<div class="flex flex-col items-center bg-surface-container-lowest p-1.5 rounded">
+<span class="font-label-caps text-[9px] text-on-surface-variant">RANGE</span>
+<span class="font-telemetry-sm text-telemetry-sm text-secondary font-bold mt-0.5">284 km</span>
+</div>
+<div class="flex flex-col items-center bg-surface-container-lowest p-1.5 rounded">
+<span class="font-label-caps text-[9px] text-on-surface-variant">POWER</span>
+<span class="font-telemetry-sm text-telemetry-sm text-primary font-bold mt-0.5">68.4 kW</span>
+</div>
+</div>
+</section>
+<!-- FLYING-CAR VEHICLE STAGE & ATMOSPHERIC CHAMBER -->
+<section class="bg-surface-container/90 rounded-xl p-space-md shadow-xl flex flex-col gap-space-sm backdrop-blur-xl relative overflow-hidden">
+<!-- Stage Header & State Beacon -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[18px]">flight</span>
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">// VEHICLE_STAGE_AERO_CHAMBER</span>
+</div>
+<div class="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-secondary-container/20">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-caps text-[9px] text-secondary font-bold tracking-tight">STABILIZED / HOVER ACTIVE</span>
+</div>
+</div>
+<!-- Atmospheric Chamber & Hover Vehicle Stage (Inline SVG) -->
+<div class="relative w-full h-48 bg-surface-container-lowest rounded-xl overflow-hidden flex items-center justify-center">
+<!-- Atmospheric Particle Canvas Backing -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none opacity-40" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<radialgradient cx="50%" cy="30%" id="skyVoid" r="70%">
+<stop offset="0%" stop-color="#006a70" stop-opacity="0.35"></stop>
+<stop offset="100%" stop-color="#0b0e15" stop-opacity="0.95"></stop>
+</radialgradient>
+<!-- Thruster Glows -->
+<filter id="thrusterGlow">
+<fegaussianblur result="coloredBlur" stddeviation="4"></fegaussianblur>
+<femerge>
+<femergenode in="coloredBlur"></femergenode>
+<femergenode in="SourceGraphic"></femergenode>
+</femerge>
+</filter>
+</defs>
+<rect fill="url(#skyVoid)" height="100%" width="100%"></rect>
+<!-- Horizon Grid & Vector Altitude Lines -->
+<line stroke="#3a494b" stroke-dasharray="4 4" stroke-width="0.5" x1="0" x2="400" y1="130" y2="130"></line>
+<line stroke="#3a494b" stroke-width="0.75" x1="0" x2="400" y1="150" y2="150"></line>
+<line stroke="#3a494b" stroke-width="0.5" x1="60" x2="10" y1="130" y2="190"></line>
+<line stroke="#3a494b" stroke-width="0.5" x1="140" x2="100" y1="130" y2="190"></line>
+<line stroke="#3a494b" stroke-width="0.5" x1="220" x2="260" y1="130" y2="190"></line>
+<line stroke="#3a494b" stroke-width="0.5" x1="300" x2="350" y1="130" y2="190"></line>
+</svg>
+<!-- Hover Shadow under Vehicle -->
+<div class="absolute bottom-6 w-44 h-4 rounded-full bg-primary-container/20 blur-md transition-all duration-700" id="hover-shadow"></div>
+<!-- Battery Pack Underglow (Amber/Cyan heat radiation) -->
+<div class="absolute bottom-8 w-32 h-6 rounded-full bg-tertiary-fixed-dim/30 blur-lg animate-pulse pointer-events-none"></div>
+<!-- Hovering Electric Vehicle Concept SVG -->
+<div class="relative z-10 w-64 h-32 flex items-center justify-center transition-transform duration-1000 ease-in-out" id="flying-vehicle-body">
+<svg class="w-full h-full drop-shadow-[0_8px_16px_rgba(0,242,254,0.15)]" viewbox="0 0 280 140">
+<defs>
+<!-- Hull Gradient -->
+<lineargradient id="hullGrad" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#32353d"></stop>
+<stop offset="45%" stop-color="#1d1f27"></stop>
+<stop offset="100%" stop-color="#10131a"></stop>
+</lineargradient>
+<!-- Canopy Glass -->
+<lineargradient id="canopyGrad" x1="0%" x2="50%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#00f2fe" stop-opacity="0.8"></stop>
+<stop offset="70%" stop-color="#00696f" stop-opacity="0.4"></stop>
+<stop offset="100%" stop-color="#10131a" stop-opacity="0.9"></stop>
+</lineargradient>
+<!-- Pack Radiant Heat Underbody -->
+<lineargradient id="packHeatGrad" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" stop-color="#00dce6" stop-opacity="0.2"></stop>
+<stop offset="50%" stop-color="#ffb95f" stop-opacity="0.9"></stop>
+<stop offset="100%" stop-color="#00dce6" stop-opacity="0.2"></stop>
+</lineargradient>
+</defs>
+<!-- Rear Thrusters & High-Energy Plumes -->
+<g filter="url(#thrusterGlow)">
+<!-- Left Rear Thruster -->
+<ellipse cx="44" cy="74" fill="#00f2fe" opacity="0.85" rx="14" ry="4"></ellipse>
+<polygon fill="#00dce6" opacity="0.7" points="44,72 12,74 44,76"></polygon>
+<!-- Right / Central Vector Pod -->
+<ellipse cx="236" cy="74" fill="#00f2fe" opacity="0.85" rx="14" ry="4"></ellipse>
+<polygon fill="#00dce6" opacity="0.7" points="236,72 268,74 236,76"></polygon>
+</g>
+<!-- Main Aero Fuselage -->
+<path d="M 50 78 Q 70 52 140 50 Q 210 52 230 78 Q 215 88 140 90 Q 65 88 50 78 Z" fill="url(#hullGrad)"></path>
+<!-- Cockpit Bubble Glass -->
+<path d="M 95 62 Q 140 40 185 62 Q 140 56 95 62 Z" fill="url(#canopyGrad)"></path>
+<!-- Winglets / Aero Canards -->
+<path d="M 32 72 L 72 70 L 64 82 Z" fill="#272a32"></path>
+<path d="M 248 72 L 208 70 L 216 82 Z" fill="#272a32"></path>
+<!-- High-Voltage Undercarriage Battery Cell Bay -->
+<rect fill="url(#packHeatGrad)" height="6" rx="3" width="80" x="100" y="80"></rect>
+<!-- Forward Sensor Array & Matrix Headlights -->
+<circle cx="140" cy="85" fill="#e0fdff" filter="url(#thrusterGlow)" r="2.5"></circle>
+<line stroke="#00f2fe" stroke-linecap="round" stroke-width="1.5" x1="120" x2="160" y1="84" y2="84"></line>
+<!-- Micro Telemetry Markings on Hull -->
+<text fill="#b9cacb" font-family="JetBrains Mono" font-size="5" letter-spacing="1" text-anchor="middle" x="140" y="74">EV-STG-X1</text>
+</svg>
+</div>
+<!-- Top Overlay Badges: Altitude & Thruster Output -->
+<div class="absolute top-2.5 left-2.5 flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container-high/80 backdrop-blur-md">
+<span class="material-symbols-outlined text-primary-container text-[14px]">height</span>
+<span class="font-label-caps text-[10px] text-primary">ALT: <span class="text-primary-container font-bold" id="val-altitude">0.42 m</span></span>
+</div>
+<div class="absolute top-2.5 right-2.5 flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container-high/80 backdrop-blur-md">
+<span class="material-symbols-outlined text-secondary text-[14px]">bolt</span>
+<span class="font-label-caps text-[10px] text-on-surface">THRUST: <span class="text-secondary font-bold">FWD 48 kW</span></span>
+</div>
+<!-- Bottom Road Condition Hologram Overlay -->
+<div class="absolute bottom-2 left-2.5 right-2.5 flex items-center justify-between px-2.5 py-1 rounded bg-surface-container-high/70 backdrop-blur-md">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[16px]">ac_unit</span>
+<span class="font-label-caps text-[10px] text-tertiary-fixed-dim uppercase font-semibold" id="val-condition-badge">SURFACE: BLACK ICE / WET TARMAC</span>
+</div>
+<span class="font-label-caps text-[9px] text-on-surface-variant">μ = 0.18 SLIP</span>
+</div>
+</div>
+</section>
+<!-- TACTICAL INPUT SLIDERS WIDGET (COLLAPSIBLE / DRAWER) -->
+<section class="bg-surface-container/90 rounded-xl p-space-md shadow-xl flex flex-col gap-space-sm backdrop-blur-xl">
+<!-- Accordion Header -->
+<div class="flex items-center justify-between cursor-pointer select-none" id="toggle-tactical-drawer">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary-container text-[18px]">tune</span>
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-wider">// TACTICAL_INPUT_CONTROLLERS</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="font-label-caps text-[10px]" id="drawer-state-text">EXPANDED</span>
+<span class="material-symbols-outlined text-[18px] transition-transform duration-300" id="drawer-chevron">expand_less</span>
+</div>
+</div>
+<!-- Sliders Form Container -->
+<div class="flex flex-col gap-space-sm pt-1 transition-all duration-300" id="tactical-drawer-body">
+<!-- 1. Speed Slider -->
+<div class="flex flex-col gap-1 bg-surface-container-lowest/80 p-space-sm rounded-lg">
+<div class="flex justify-between items-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">TARGET VEHICLE SPEED</span>
+<span class="font-telemetry-sm text-telemetry-sm text-primary-fixed-dim font-bold"><span id="lbl-slider-speed">114</span> km/h</span>
+</div>
+<input class="w-full h-1.5 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-primary-container" id="slider-speed" max="180" min="0" step="1" type="range" value="114"/>
+<div class="flex justify-between font-label-caps text-[9px] text-on-surface-variant">
+<span>0 KM/H</span>
+<span class="text-secondary font-bold">RECOM: 82 KM/H</span>
+<span>180 KM/H</span>
+</div>
+</div>
+<!-- 2. Battery Temperature Slider -->
+<div class="flex flex-col gap-1 bg-surface-container-lowest/80 p-space-sm rounded-lg">
+<div class="flex justify-between items-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">PACK CELL TEMPERATURE</span>
+<span class="font-telemetry-sm text-telemetry-sm text-tertiary-fixed-dim font-bold"><span id="lbl-slider-temp">42.8</span> °C</span>
+</div>
+<input class="w-full h-1.5 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-tertiary-fixed-dim" id="slider-temp" max="70" min="-30" step="0.2" type="range" value="42.8"/>
+<div class="flex justify-between font-label-caps text-[9px] text-on-surface-variant">
+<span>-30°C</span>
+<span class="text-secondary font-bold">NOMINAL: 25°C</span>
+<span class="text-error font-bold">70°C CRIT</span>
+</div>
+</div>
+<!-- 3. Obstacle Distance Slider -->
+<div class="flex flex-col gap-1 bg-surface-container-lowest/80 p-space-sm rounded-lg">
+<div class="flex justify-between items-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">LIDAR RADAR DISTANCE</span>
+<span class="font-telemetry-sm text-telemetry-sm text-primary font-bold"><span id="lbl-slider-dist">72</span> m</span>
+</div>
+<input class="w-full h-1.5 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-primary" id="slider-dist" max="300" min="0" step="1" type="range" value="72"/>
+<div class="flex justify-between font-label-caps text-[9px] text-on-surface-variant">
+<span class="text-error font-bold">0 m (COLLISION)</span>
+<span class="text-on-surface">72 m</span>
+<span>300 m CLEAR</span>
+</div>
+</div>
+<!-- 4. Ambient Temperature Slider -->
+<div class="flex flex-col gap-1 bg-surface-container-lowest/80 p-space-sm rounded-lg">
+<div class="flex justify-between items-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">ATMOSPHERIC AMBIENT</span>
+<span class="font-telemetry-sm text-telemetry-sm text-primary font-bold"><span id="lbl-slider-ambient">-4</span> °C</span>
+</div>
+<input class="w-full h-1.5 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-primary" id="slider-ambient" max="55" min="-30" step="1" type="range" value="-4"/>
+<div class="flex justify-between font-label-caps text-[9px] text-on-surface-variant">
+<span>-30°C FREEZE</span>
+<span>0°C</span>
+<span>+55°C ARID</span>
+</div>
+</div>
+<!-- Road Condition Pills -->
+<div class="flex flex-col gap-1.5 pt-1">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">TRACTION SURFACE CONDITION</span>
+<div class="grid grid-cols-4 gap-1.5" id="pills-surface-group">
+<button class="btn-road px-2 py-1.5 rounded font-label-caps text-[10px] bg-surface-container-lowest text-on-surface-variant hover:text-on-surface transition-colors" data-surface="dry">DRY</button>
+<button class="btn-road px-2 py-1.5 rounded font-label-caps text-[10px] bg-surface-container-lowest text-on-surface-variant hover:text-on-surface transition-colors" data-surface="wet">WET</button>
+<button class="btn-road px-2 py-1.5 rounded font-label-caps text-[10px] bg-surface-container-lowest text-on-surface-variant hover:text-on-surface transition-colors" data-surface="snow">SNOW</button>
+<button class="btn-road px-2 py-1.5 rounded font-label-caps text-[10px] bg-tertiary-fixed-dim text-on-tertiary-container font-bold shadow-md shadow-tertiary-fixed-dim/20" data-surface="ice">BLACK ICE</button>
+</div>
+</div>
+</div>
+</section>
+<!-- GLASS-BOX RAW TICK JSON FOOTER TOGGLE -->
+<section class="bg-surface-container/90 rounded-xl p-space-md shadow-xl flex flex-col gap-space-sm backdrop-blur-xl">
+<div class="flex items-center justify-between">
+<button class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-bright text-primary-container transition-all active:scale-95 shadow-sm" id="toggle-json-inspector">
+<span class="material-symbols-outlined text-[16px]">data_object</span>
+<span class="font-label-caps text-label-caps uppercase font-bold tracking-wider">Inspect Raw Tick JSON (2Hz HTTP)</span>
+</button>
+<span class="font-label-caps text-[10px] text-secondary flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+        STREAM OK
+      </span>
+</div>
+<!-- Collapsible JSON Payload Terminal Pre -->
+<div class="hidden flex-col gap-1 bg-surface-container-lowest p-space-sm rounded-lg transition-all duration-300" id="json-inspector-drawer">
+<div class="flex items-center justify-between pb-1">
+<span class="font-label-caps text-[9px] text-on-surface-variant">// PAYLOAD_SAMPLE_ID: 0x882F_B7</span>
+<span class="font-label-caps text-[9px] text-primary-container">CONTENT-TYPE: APPLICATION/JSON</span>
+</div>
+<pre class="font-telemetry-sm text-[11px] text-primary leading-relaxed overflow-x-auto whitespace-pre no-scrollbar p-1" id="json-code-block">{
+  "timestamp": 1729019284201,
+  "tick_hz": 2,
+  "mode": "SCENARIO",
+  "scenario": "alpine_freeze_ascent",
+  "speed_kmh": 114.0,
+  "recommended_speed_kmh": 82.0,
+  "pack_temp_c": 42.8,
+  "ambient_temp_c": -4.0,
+  "obstacle_distance_m": 72.0,
+  "road_condition": "black_ice",
+  "risk_score": 68,
+  "risk_grade": "CAUTION_AMBER",
+  "hover_elevation_m": 0.42,
+  "pack_soc_pct": 64.2
+}
+      </pre>
+</div>
+</section>
+</div>
+<script>
+  // Interactive Simulator Micro-interactions
+  (function initTelemetryStage() {
+    // 1. Play / Pause toggle
+    const btnPlay = document.getElementById('btn-sim-play');
+    const playIcon = document.getElementById('sim-play-icon');
+    const playText = document.getElementById('sim-play-text');
+    let isPlaying = true;
+
+    if (btnPlay) {
+      btnPlay.addEventListener('click', () => {
+        isPlaying = !isPlaying;
+        if (isPlaying) {
+          playIcon.textContent = 'pause';
+          playText.textContent = 'RUNNING';
+          playText.classList.remove('text-on-surface-variant');
+          playIcon.classList.add('text-secondary');
+        } else {
+          playIcon.textContent = 'play_arrow';
+          playText.textContent = 'PAUSED';
+          playText.classList.add('text-on-surface-variant');
+          playIcon.classList.remove('text-secondary');
+        }
+      });
+    }
+
+    // 2. Mode Pill Toggle
+    const btnManual = document.getElementById('btn-mode-manual');
+    const btnScenario = document.getElementById('btn-mode-scenario');
+    if (btnManual && btnScenario) {
+      btnManual.addEventListener('click', () => {
+        btnManual.className = 'px-2.5 py-1 rounded bg-primary-container text-on-primary-container font-label-caps text-label-caps font-bold shadow-md shadow-primary-container/20';
+        btnScenario.className = 'px-2.5 py-1 rounded font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface transition-colors';
+      });
+      btnScenario.addEventListener('click', () => {
+        btnScenario.className = 'px-2.5 py-1 rounded bg-primary-container text-on-primary-container font-label-caps text-label-caps font-bold shadow-md shadow-primary-container/20';
+        btnManual.className = 'px-2.5 py-1 rounded font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface transition-colors';
+      });
+    }
+
+    // 3. Tactile Drawer Accordion Toggle
+    const drawerToggle = document.getElementById('toggle-tactical-drawer');
+    const drawerBody = document.getElementById('tactical-drawer-body');
+    const drawerChevron = document.getElementById('drawer-chevron');
+    const drawerText = document.getElementById('drawer-state-text');
+    let drawerOpen = true;
+
+    if (drawerToggle && drawerBody) {
+      drawerToggle.addEventListener('click', () => {
+        drawerOpen = !drawerOpen;
+        if (drawerOpen) {
+          drawerBody.classList.remove('hidden');
+          drawerChevron.style.transform = 'rotate(0deg)';
+          drawerText.textContent = 'EXPANDED';
+        } else {
+          drawerBody.classList.add('hidden');
+          drawerChevron.style.transform = 'rotate(180deg)';
+          drawerText.textContent = 'COLLAPSED';
+        }
+      });
+    }
+
+    // 4. Interactive Sliders updating HUD Readouts & JSON Payload
+    const sliderSpeed = document.getElementById('slider-speed');
+    const lblSpeed = document.getElementById('lbl-slider-speed');
+    const displaySpeed = document.getElementById('val-speed-display');
+
+    const sliderTemp = document.getElementById('slider-temp');
+    const lblTemp = document.getElementById('lbl-slider-temp');
+
+    const sliderDist = document.getElementById('slider-dist');
+    const lblDist = document.getElementById('lbl-slider-dist');
+
+    const sliderAmbient = document.getElementById('slider-ambient');
+    const lblAmbient = document.getElementById('lbl-slider-ambient');
+
+    const jsonCode = document.getElementById('json-code-block');
+
+    function updatePayload() {
+      const spd = sliderSpeed ? sliderSpeed.value : 114;
+      const tmp = sliderTemp ? sliderTemp.value : 42.8;
+      const dst = sliderDist ? sliderDist.value : 72;
+      const amb = sliderAmbient ? sliderAmbient.value : -4;
+
+      if (jsonCode) {
+        jsonCode.textContent = JSON.stringify({
+          timestamp: Date.now(),
+          tick_hz: 2,
+          mode: "SCENARIO",
+          scenario: "alpine_freeze_ascent",
+          speed_kmh: parseFloat(spd),
+          recommended_speed_kmh: 82.0,
+          pack_temp_c: parseFloat(tmp),
+          ambient_temp_c: parseFloat(amb),
+          obstacle_distance_m: parseFloat(dst),
+          road_condition: "black_ice",
+          risk_score: Math.min(100, Math.round(30 + (spd / 3) + (tmp > 35 ? (tmp - 35) * 1.5 : 0))),
+          risk_grade: "CAUTION_AMBER",
+          hover_elevation_m: 0.42,
+          pack_soc_pct: 64.2
+        }, null, 2);
+      }
+    }
+
+    if (sliderSpeed) {
+      sliderSpeed.addEventListener('input', (e) => {
+        lblSpeed.textContent = e.target.value;
+        if (displaySpeed) displaySpeed.textContent = e.target.value;
+        updatePayload();
+      });
+    }
+    if (sliderTemp) {
+      sliderTemp.addEventListener('input', (e) => {
+        lblTemp.textContent = e.target.value;
+        updatePayload();
+      });
+    }
+    if (sliderDist) {
+      sliderDist.addEventListener('input', (e) => {
+        lblDist.textContent = e.target.value;
+        updatePayload();
+      });
+    }
+    if (sliderAmbient) {
+      sliderAmbient.addEventListener('input', (e) => {
+        lblAmbient.textContent = e.target.value;
+        updatePayload();
+      });
+    }
+
+    // 5. Road condition selection pills
+    const roadPills = document.querySelectorAll('.btn-road');
+    const conditionBadge = document.getElementById('val-condition-badge');
+    roadPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        roadPills.forEach(p => {
+          p.className = 'btn-road px-2 py-1.5 rounded font-label-caps text-[10px] bg-surface-container-lowest text-on-surface-variant hover:text-on-surface transition-colors';
+        });
+        pill.className = 'btn-road px-2 py-1.5 rounded font-label-caps text-[10px] bg-tertiary-fixed-dim text-on-tertiary-container font-bold shadow-md shadow-tertiary-fixed-dim/20';
+        if (conditionBadge) {
+          conditionBadge.textContent = 'SURFACE: ' + pill.getAttribute('data-surface').toUpperCase() + ' DETECTED';
+        }
+      });
+    });
+
+    // 6. JSON Drawer Toggle
+    const jsonBtn = document.getElementById('toggle-json-inspector');
+    const jsonDrawer = document.getElementById('json-inspector-drawer');
+    if (jsonBtn && jsonDrawer) {
+      jsonBtn.addEventListener('click', () => {
+        jsonDrawer.classList.toggle('hidden');
+        jsonDrawer.classList.toggle('flex');
+      });
+    }
+
+    // 7. Subtle Vehicle Hover Bobbing Micro-Animation
+    const vehicle = document.getElementById('flying-vehicle-body');
+    const shadow = document.getElementById('hover-shadow');
+    const altDisplay = document.getElementById('val-altitude');
+    let bobPhase = 0;
+
+    setInterval(() => {
+      if (!isPlaying || !vehicle) return;
+      bobPhase = (bobPhase + 1) % 4;
+      const offsets = [0, -4, 2, -1];
+      const altitudes = ["0.42 m", "0.45 m", "0.40 m", "0.43 m"];
+      const yOffset = offsets[bobPhase];
+      vehicle.style.transform = `translateY(${yOffset}px)`;
+      if (shadow) {
+        shadow.style.transform = `scale(${1 - (yOffset * 0.03)})`;
+      }
+      if (altDisplay) {
+        altDisplay.textContent = altitudes[bobPhase];
+      }
+    }, 1200);
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_16px_rgba(0,0,0,0.4)]" data-active-classes="text-primary-container bg-surface-container-high/80"><div class="flex justify-between items-center h-16 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-1 py-1 rounded transition-colors flex-1 text-primary-container bg-surface-container-high/80" data-path="hud-vehicle-stage" href="#"><span class="material-symbols-outlined text-[20px]">speed</span><span class="font-label-caps text-[9px] uppercase tracking-normal mt-0.5 truncate">HUD Stage</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-1 py-1 rounded text-on-surface-variant hover:text-on-surface transition-colors flex-1" data-path="battery-strain-telemetry" href="#"><span class="material-symbols-outlined text-[20px]">battery_charging_full</span><span class="font-label-caps text-[9px] uppercase tracking-normal mt-0.5 truncate">Strain</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-1 py-1 rounded text-on-surface-variant hover:text-on-surface transition-colors flex-1" data-path="digital-twin-radar" href="#"><span class="material-symbols-outlined text-[20px]">radar</span><span class="font-label-caps text-[9px] uppercase tracking-normal mt-0.5 truncate">Twin Radar</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-1 py-1 rounded text-on-surface-variant hover:text-on-surface transition-colors flex-1" data-path="chaos-injection-alerts" href="#"><span class="material-symbols-outlined text-[20px]">warning</span><span class="font-label-caps text-[9px] uppercase tracking-normal mt-0.5 truncate">Chaos</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-1 py-1 rounded text-on-surface-variant hover:text-on-surface transition-colors flex-1" data-path="copilot-ai-json-inspector" href="#"><span class="material-symbols-outlined text-[20px]">terminal</span><span class="font-label-caps text-[9px] uppercase tracking-normal mt-0.5 truncate">Copilot</span></a></div></nav></body></html>

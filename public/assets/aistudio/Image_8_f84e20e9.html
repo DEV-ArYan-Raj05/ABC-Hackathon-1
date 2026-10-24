@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-secondary-fixed-variant": "#005236", "primary-fixed": "#6ff6ff", "on-tertiary-fixed": "#2a1700", "on-primary-container": "#006a70", "outline-variant": "#3a494b", "surface": "#10131a", "inverse-on-surface": "#2d3038", "tertiary-fixed-dim": "#ffb95f", "on-tertiary-container": "#875400", "surface-container-high": "#272a32", "inverse-primary": "#00696f", "secondary": "#4edea3", "inverse-surface": "#e1e2ec", "on-surface": "#e1e2ec", "surface-container-low": "#191b23", "on-secondary-container": "#00311f", "surface-tint": "#00dce6", "surface-container": "#1d1f27", "on-secondary-fixed": "#002113", "on-error": "#690005", "tertiary": "#fff5ee", "on-tertiary-fixed-variant": "#653e00", "on-error-container": "#ffdad6", "on-tertiary": "#472a00", "error": "#ffb4ab", "secondary-container": "#00a572", "tertiary-container": "#ffd3a1", "surface-container-lowest": "#0b0e15", "on-surface-variant": "#b9cacb", "secondary-fixed": "#6ffbbe", "primary-fixed-dim": "#00dce6", "surface-dim": "#10131a", "error-container": "#93000a", "surface-bright": "#363941", "outline": "#849495", "tertiary-fixed": "#ffddb8", "on-primary-fixed": "#002022", "secondary-fixed-dim": "#4edea3", "primary": "#e0fdff", "surface-container-highest": "#32353d", "on-primary": "#00373a", "on-primary-fixed-variant": "#004f53", "on-background": "#e1e2ec", "primary-container": "#00f2fe", "background": "#10131a", "on-secondary": "#003824", "surface-variant": "#32353d" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "space-md": "1rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "space-xl": "2.5rem", "margin-desktop": "2rem", "margin": "1rem", "gutter": "1rem", "gutter-desktop": "1.5rem" }, fontFamily: { "telemetry-xl": ["JetBrains Mono"], "headline-lg": ["Space Grotesk"], "body-sm": ["Inter"], "display-lg": ["Space Grotesk"], "body-lg": ["Inter"], "headline-md": ["Space Grotesk"], "telemetry-sm": ["JetBrains Mono"], "body-md": ["Inter"], "telemetry-md": ["JetBrains Mono"], "label-caps": ["JetBrains Mono"], "display-lg-mobile": ["Space Grotesk"], "headline-sm": ["Space Grotesk"] }, fontSize: { "telemetry-xl": ["36px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700" }], "headline-lg": ["30px", { lineHeight: "38px", letterSpacing: "-0.02em", fontWeight: "600" }], "body-sm": ["12px", { lineHeight: "18px", fontWeight: "400" }], "display-lg": ["48px", { lineHeight: "56px", letterSpacing: "-0.03em", fontWeight: "700" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }], "headline-md": ["22px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600" }], "telemetry-sm": ["13px", { lineHeight: "16px", fontWeight: "500" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }], "telemetry-md": ["18px", { lineHeight: "24px", fontWeight: "600" }], "label-caps": ["11px", { lineHeight: "14px", letterSpacing: "0.12em", fontWeight: "600" }], "display-lg-mobile": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700" }], "headline-sm": ["18px", { lineHeight: "24px", fontWeight: "600" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface antialiased min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_16px_rgba(0,242,254,0.06)]"><div class="h-20 px-space-md flex flex-col justify-between py-space-xs"><div class="flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="EV Intelligence Telemetry Emblem" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WoFiW6rtSjSD_m2iyq9Sga0Sr94lnAJai7JZUyJ48G9l9HrtrH37q15xjRl3K4SM8m-33KgCosYfqZ-VAc0R1NWh3CM5ROtCv_MvddeqiG5BpNx7V1C_EpRE8ldm5FNEl8ROdW685-r1_UGmxIQ6dExtKd3k-7tR08gnzkuhKQmozBQNUpzYQsFPxaZ0ButlfaT3EJg_WGcwAord4zlezm1jV_pNCcDyR7p5ntUBObrNDYRNj406Hl3B5L"/><div class="flex flex-col"><span class="font-label-caps text-label-caps text-primary-container tracking-widest uppercase">EV TELEMETRY LAB</span><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">Chaos Injection Alerts</span></div></div><div class="flex items-center gap-space-sm"><div class="hidden sm:flex items-center gap-1.5 px-space-xs py-0.5 rounded bg-surface-container-high/60"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span><span class="font-label-caps text-label-caps text-secondary uppercase">LINK ACTIVE</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="flex items-center justify-between gap-space-xs overflow-x-auto no-scrollbar"><div class="flex items-center gap-1.5 shrink-0"><span class="px-1.5 py-0.5 rounded bg-surface-container-high font-label-caps text-label-caps text-secondary flex items-center gap-1"><span class="w-1 h-1 rounded-full bg-secondary"></span>READY</span><span class="px-1.5 py-0.5 rounded bg-surface-container-high font-label-caps text-label-caps text-on-surface-variant">2Hz TICK</span><span class="px-1.5 py-0.5 rounded bg-surface-container-high font-label-caps text-label-caps text-primary-container">PRESET: ALPHA_WLTP</span></div><div class="flex items-center gap-1 bg-surface-container-lowest/80 p-0.5 rounded shrink-0"><button class="px-2 py-0.5 font-label-caps text-label-caps rounded bg-primary-container text-on-primary-container font-bold min-h-[24px]">1X</button><button class="px-2 py-0.5 font-label-caps text-label-caps rounded text-on-surface-variant hover:text-on-surface min-h-[24px]">4X</button><button class="px-2 py-0.5 font-label-caps text-label-caps rounded text-on-surface-variant hover:text-on-surface min-h-[24px]">10X</button></div></div></div></header><main class="flex flex-col relative w-full bg-surface pt-20 pb-20"><div class="flex flex-col w-full px-space-md py-space-sm gap-space-md">
+<!-- Active Chaos HUD Status Banner -->
+<div class="flex flex-col w-full bg-surface-container-low rounded-xl p-space-md shadow-lg relative overflow-hidden">
+<div class="flex items-center justify-between gap-space-sm mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-error animate-ping"></span>
+<span class="font-label-caps text-label-caps text-error tracking-wider uppercase">PERMUTATION FAULT MATRIX</span>
+</div>
+<span class="font-telemetry-sm text-telemetry-sm text-on-surface-variant bg-surface-container px-2 py-0.5 rounded">ENV: DYNAMIC STRESS</span>
+</div>
+<!-- Active Injections Horizontal Stream -->
+<div class="flex flex-wrap items-center gap-space-xs" id="active-pills-stream">
+<div class="flex items-center gap-1.5 px-space-sm py-1 rounded bg-error-container/40 text-on-error-container shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-error">mode_heat</span>
+<span class="font-label-caps text-label-caps font-bold">COOLING FAIL: <span class="font-telemetry-sm" id="timer-cooling">00:34</span></span>
+</div>
+<div class="flex items-center gap-1.5 px-space-sm py-1 rounded bg-tertiary-container/30 text-on-tertiary-fixed-variant shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed-dim">ac_unit</span>
+<span class="font-label-caps text-label-caps font-bold">BLACK ICE: <span class="font-telemetry-sm">PERSISTENT</span></span>
+</div>
+<div class="flex items-center gap-1 px-space-xs py-1 rounded bg-surface-container text-on-surface-variant">
+<span class="font-label-caps text-label-caps">+1 LATENT PERT</span>
+</div>
+</div>
+</div>
+<!-- Chaos Injection Command Grid -->
+<div class="flex flex-col w-full bg-surface-container-low rounded-xl p-space-md shadow-md gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-[20px]">bolt</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Chaos Injector Hub</h2>
+</div>
+<span class="font-label-caps text-label-caps text-primary-container bg-surface-container px-2 py-0.5 rounded">REAL-TIME BUS</span>
+</div>
+<!-- Grid of Chaos Triggers -->
+<div class="grid grid-cols-2 gap-space-xs">
+<!-- 1: Cold Snap -->
+<button class="flex items-center justify-between p-space-sm rounded bg-surface-container hover:bg-surface-container-high transition-colors text-left active:scale-[0.98]" onclick="triggerFault('Cold Snap', 'temp')">
+<div class="flex flex-col min-w-0 pr-1">
+<span class="font-label-caps text-label-caps text-primary-fixed truncate">Cold Snap</span>
+<span class="font-telemetry-sm text-body-sm text-on-surface-variant">-25°C Arctic</span>
+</div>
+<span class="material-symbols-outlined text-primary-container text-[18px]">severe_cold</span>
+</button>
+<!-- 2: Heat Wave -->
+<button class="flex items-center justify-between p-space-sm rounded bg-surface-container hover:bg-surface-container-high transition-colors text-left active:scale-[0.98]" onclick="triggerFault('Heat Wave', 'temp')">
+<div class="flex flex-col min-w-0 pr-1">
+<span class="font-label-caps text-label-caps text-error truncate">Heat Wave</span>
+<span class="font-telemetry-sm text-body-sm text-on-surface-variant">+48°C Desert</span>
+</div>
+<span class="material-symbols-outlined text-error text-[18px]">sunny</span>
+</button>
+<!-- 3: Black Ice -->
+<button class="flex items-center justify-between p-space-sm rounded bg-surface-container hover:bg-surface-container-high transition-colors text-left active:scale-[0.98]" onclick="triggerFault('Black Ice', 'friction')">
+<div class="flex flex-col min-w-0 pr-1">
+<span class="font-label-caps text-label-caps text-on-surface truncate">Black Ice</span>
+<span class="font-telemetry-sm text-body-sm text-on-surface-variant">μ = 0.15 Friction</span>
+</div>
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[18px]">device_thermostat</span>
+</button>
+<!-- 4: Phantom Obstacle -->
+<button class="flex items-center justify-between p-space-sm rounded bg-surface-container hover:bg-surface-container-high transition-colors text-left active:scale-[0.98]" onclick="triggerFault('Phantom Obstacle', 'lidar')">
+<div class="flex flex-col min-w-0 pr-1">
+<span class="font-label-caps text-label-caps text-on-surface truncate">Phantom Obj</span>
+<span class="font-telemetry-sm text-body-sm text-on-surface-variant">LIDAR False +</span>
+</div>
+<span class="material-symbols-outlined text-secondary text-[18px]">visibility_off</span>
+</button>
+<!-- 5: Cooling Failure -->
+<button class="flex items-center justify-between p-space-sm rounded bg-surface-container hover:bg-surface-container-high transition-colors text-left active:scale-[0.98]" onclick="triggerFault('Cooling Failure', 'critical')">
+<div class="flex flex-col min-w-0 pr-1">
+<span class="font-label-caps text-label-caps text-error truncate">Cooling Fail</span>
+<span class="font-telemetry-sm text-body-sm text-on-surface-variant">Pump Cavitation</span>
+</div>
+<span class="material-symbols-outlined text-error text-[18px]">power_off</span>
+</button>
+<!-- 6: Cell Imbalance -->
+<button class="flex items-center justify-between p-space-sm rounded bg-surface-container hover:bg-surface-container-high transition-colors text-left active:scale-[0.98]" onclick="triggerFault('Cell Imbalance', 'bms')">
+<div class="flex flex-col min-w-0 pr-1">
+<span class="font-label-caps text-label-caps text-on-surface truncate">Cell Imbalance</span>
+<span class="font-telemetry-sm text-body-sm text-on-surface-variant">ΔV &gt; 380mV</span>
+</div>
+<span class="material-symbols-outlined text-primary-container text-[18px]">density_medium</span>
+</button>
+<!-- 7: Sensor Dropout -->
+<button class="flex items-center justify-between p-space-sm rounded bg-surface-container hover:bg-surface-container-high transition-colors text-left active:scale-[0.98]" onclick="triggerFault('Sensor Dropout', 'bus')">
+<div class="flex flex-col min-w-0 pr-1">
+<span class="font-label-caps text-label-caps text-on-surface truncate">Sensor Drop</span>
+<span class="font-telemetry-sm text-body-sm text-on-surface-variant">CAN-FD 0x3F2</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">sensors_off</span>
+</button>
+<!-- 8: Regen Failure -->
+<button class="flex items-center justify-between p-space-sm rounded bg-surface-container hover:bg-surface-container-high transition-colors text-left active:scale-[0.98]" onclick="triggerFault('Regen Failure', 'inverter')">
+<div class="flex flex-col min-w-0 pr-1">
+<span class="font-label-caps text-label-caps text-on-surface truncate">Regen Failure</span>
+<span class="font-telemetry-sm text-body-sm text-on-surface-variant">Inverter Gate Trip</span>
+</div>
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[18px]">energy_savings_leaf</span>
+</button>
+<!-- 9: HVAC Surge -->
+<button class="flex items-center justify-between p-space-sm rounded bg-surface-container hover:bg-surface-container-high transition-colors text-left active:scale-[0.98]" onclick="triggerFault('HVAC Surge', 'drain')">
+<div class="flex flex-col min-w-0 pr-1">
+<span class="font-label-caps text-label-caps text-on-surface truncate">HVAC Surge</span>
+<span class="font-telemetry-sm text-body-sm text-on-surface-variant">+8.4 kW Parasitic</span>
+</div>
+<span class="material-symbols-outlined text-primary-fixed-dim text-[18px]">air</span>
+</button>
+<!-- 10: Chaos Cocktail -->
+<button class="flex items-center justify-between p-space-sm rounded bg-primary-container text-on-primary-container font-bold hover:brightness-110 transition-all active:scale-[0.98]" onclick="triggerCocktail()">
+<div class="flex flex-col min-w-0 pr-1">
+<span class="font-label-caps text-label-caps truncate">Chaos Cocktail</span>
+<span class="font-telemetry-sm text-body-sm opacity-80">3x Randomized</span>
+</div>
+<span class="material-symbols-outlined text-[18px]">shuffle</span>
+</button>
+</div>
+<!-- Reset / Clear Trigger -->
+<div class="pt-space-xs">
+<button class="w-full flex items-center justify-center gap-space-xs py-space-sm rounded bg-surface-container-highest text-on-surface font-label-caps text-label-caps hover:bg-error-container hover:text-on-error-container transition-colors" onclick="clearAllFaults()">
+<span class="material-symbols-outlined text-[16px]">restart_alt</span>
+        CLEAR ALL SIMULATED PERTURBATIONS
+      </button>
+</div>
+</div>
+<!-- Real-Time Fault Timeline Stream & Recovery Bar -->
+<div class="flex flex-col w-full bg-surface-container-low rounded-xl p-space-md shadow-md gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">healing</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Recovery &amp; Live Timeline</h3>
+</div>
+<span class="font-telemetry-sm text-telemetry-sm text-secondary bg-surface-container px-2 py-0.5 rounded">ONLINE</span>
+</div>
+<!-- Recovery Algorithm Bar -->
+<div class="flex flex-col gap-1 p-space-sm rounded bg-surface-container-lowest">
+<div class="flex justify-between items-center text-on-surface">
+<span class="font-label-caps text-label-caps text-secondary">RECOVERY ALGORITHM (KALMAN PID)</span>
+<span class="font-telemetry-sm text-telemetry-sm text-secondary font-bold" id="recovery-percent">78% Stabilized</span>
+</div>
+<div class="w-full h-2 rounded bg-surface-container-high overflow-hidden">
+<div class="h-full bg-secondary transition-all duration-500 rounded" id="recovery-fill" style="width: 78%;"></div>
+</div>
+</div>
+<!-- Live Event Feed -->
+<div class="flex flex-col gap-space-xs" id="timeline-feed">
+<!-- Item 1: Critical -->
+<div class="flex items-start gap-space-sm p-space-sm rounded bg-error-container/20">
+<div class="w-7 h-7 rounded bg-error flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-on-error text-[18px]">warning</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-caps text-label-caps text-error font-bold">CRITICAL</span>
+<span class="font-telemetry-sm text-body-sm text-on-surface-variant">14:02:18.42</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface mt-0.5">
+            Thermal runaway risk in Module 4 (+46.2°C). Throttling power output ceiling to 80 kW.
+          </p>
+</div>
+</div>
+<!-- Item 2: Caution -->
+<div class="flex items-start gap-space-sm p-space-sm rounded bg-surface-container">
+<div class="w-7 h-7 rounded bg-tertiary-fixed-dim/30 flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[18px]">tire_repair</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-caps text-label-caps text-tertiary-fixed-dim font-bold">CAUTION</span>
+<span class="font-telemetry-sm text-body-sm text-on-surface-variant">14:02:15.10</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface mt-0.5">
+            Traction loss detected on rear axle slip differential. Regenerative braking limited to 15%.
+          </p>
+</div>
+</div>
+<!-- Item 3: Info / Resolved -->
+<div class="flex items-start gap-space-sm p-space-sm rounded bg-surface-container">
+<div class="w-7 h-7 rounded bg-secondary-container/40 flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-caps text-label-caps text-secondary font-bold">RESOLVED</span>
+<span class="font-telemetry-sm text-body-sm text-on-surface-variant">14:01:50.88</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+            Sensor dropout auto-compensated via Kalman filter digital-twin estimation matrix.
+          </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Copilot AI Summary & Diagnostic Assistant -->
+<div class="flex flex-col w-full bg-surface-container-low rounded-xl p-space-md shadow-md gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-2.5 h-2.5 rounded-full bg-primary-container animate-ping"></div>
+<span class="font-label-caps text-label-caps text-primary-container font-bold uppercase tracking-wider">AI OPTIMIZING · 2Hz TICK CYCLE</span>
+</div>
+<span class="font-telemetry-sm text-telemetry-sm text-on-surface-variant">CONFIDENCE 94.6%</span>
+</div>
+<!-- AI Diagnostic Text Box -->
+<div class="p-space-sm rounded bg-surface-container flex flex-col gap-1.5">
+<div class="flex items-center gap-1.5 text-primary-container">
+<span class="material-symbols-outlined text-[18px]">psychology</span>
+<span class="font-label-caps text-label-caps font-bold">INTELLIGENT MITIGATION STRATEGY</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-snug">
+        “Battery temperature rising faster than dissipation rate on current gradient. Reducing target speed to <span class="font-telemetry-sm text-primary-container font-bold">82 km/h</span> recovers <span class="font-telemetry-sm text-secondary font-bold">14% SoC</span> and prevents forced thermal shutdown in <span class="font-telemetry-sm text-error font-bold">4.2 minutes</span>.”
+      </p>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-space-xs">
+<button class="flex-1 flex items-center justify-center gap-1.5 py-space-sm px-2 rounded bg-primary-container text-on-primary-container font-label-caps text-label-caps font-bold hover:brightness-110 active:scale-[0.98] transition-all" id="btn-apply-strategy" onclick="applyCopilotStrategy()">
+<span class="material-symbols-outlined text-[18px]">task_alt</span>
+        APPLY STRATEGY
+      </button>
+<button class="flex-1 flex items-center justify-center gap-1.5 py-space-sm px-2 rounded bg-surface-container-high text-on-surface font-label-caps text-label-caps font-bold hover:bg-surface-bright active:scale-[0.98] transition-all" onclick="simulateAlternative()">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+        SIMULATE ALT
+      </button>
+</div>
+</div>
+<!-- Glass-box Deep JSON Inspector -->
+<div class="flex flex-col w-full bg-surface-container-low rounded-xl p-space-md shadow-md gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-[20px]">code_blocks</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface tracking-tight">JSON Inspector</h3>
+</div>
+<button class="flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container hover:bg-surface-container-high text-primary-container font-label-caps text-label-caps transition-colors" onclick="copyPayload()">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+<span id="copy-label">COPY</span>
+</button>
+</div>
+<!-- Inspector Tabs -->
+<div class="flex items-center gap-1 bg-surface-container-lowest p-0.5 rounded">
+<button class="flex-1 py-1 rounded bg-surface-container font-label-caps text-label-caps text-primary-container text-center font-bold" id="tab-pipeline" onclick="switchJsonTab('pipeline')">EVAL_ENVELOPE()</button>
+<button class="flex-1 py-1 rounded font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface text-center" id="tab-raw" onclick="switchJsonTab('raw')">RAW_TELEMETRY</button>
+</div>
+<!-- Monospace Obsidian Payload View -->
+<div class="w-full bg-surface-container-lowest rounded p-space-sm overflow-x-auto no-scrollbar font-telemetry-sm text-body-sm leading-relaxed max-h-56">
+<div class="flex flex-col text-on-surface-variant" id="json-view-pipeline">
+<div class="text-outline-variant font-label-caps">// Input State -&gt; evaluate_safety_envelope()</div>
+<div>{</div>
+<div class="pl-3"><span class="text-primary-container">"ambient_temp_c"</span>: <span class="text-error">+48.0</span>,</div>
+<div class="pl-3"><span class="text-primary-container">"pack_therm_c"</span>: <span class="text-error">46.2</span>,</div>
+<div class="pl-3"><span class="text-primary-container">"mu_friction"</span>: <span class="text-tertiary-fixed-dim">0.15</span>,</div>
+<div class="pl-3"><span class="text-primary-container">"cell_delta_mv"</span>: 382,</div>
+<div class="pl-3"><span class="text-primary-container">"copilot_mitigation"</span>: {</div>
+<div class="pl-6"><span class="text-secondary">"throttle_limit_kw"</span>: <span class="text-secondary">80.0</span>,</div>
+<div class="pl-6"><span class="text-secondary">"target_v_kmh"</span>: <span class="text-secondary">82</span>,</div>
+<div class="pl-6"><span class="text-secondary">"delta_soc_recovery"</span>: <span class="text-secondary">+14.2%</span></div>
+<div class="pl-3">},</div>
+<div class="pl-3"><span class="text-primary-container">"sim_status"</span>: <span class="text-secondary">"ENVELOPE_RETAINED"</span></div>
+<div>}</div>
+</div>
+<div class="hidden flex-col text-on-surface-variant" id="json-view-raw">
+<div class="text-outline-variant font-label-caps">// Raw Sensor Frame CAN-0x4FA</div>
+<div>{</div>
+<div class="pl-3"><span class="text-primary-container">"timestamp"</span>: 1711713738.421,</div>
+<div class="pl-3"><span class="text-primary-container">"active_perturbations"</span>: [</div>
+<div class="pl-6"><span class="text-error">"HEAT_WAVE"</span>,</div>
+<div class="pl-6"><span class="text-tertiary-fixed-dim">"BLACK_ICE"</span></div>
+<div class="pl-3">],</div>
+<div class="pl-3"><span class="text-primary-container">"hvac_power_draw_w"</span>: 8420,</div>
+<div class="pl-3"><span class="text-primary-container">"inverter_status"</span>: <span class="text-error">"THERMAL_DERATE"</span></div>
+<div>}</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  let coolingSeconds = 34;
+  const timerElem = document.getElementById('timer-cooling');
+  if (timerElem) {
+    setInterval(() => {
+      if (coolingSeconds > 0) {
+        coolingSeconds--;
+        const s = coolingSeconds < 10 ? '0' + coolingSeconds : coolingSeconds;
+        timerElem.textContent = '00:' + s;
+      } else {
+        timerElem.textContent = 'RESOLVED';
+      }
+    }, 1000);
+  }
+
+  function triggerFault(name, type) {
+    const stream = document.getElementById('timeline-feed');
+    const now = new Date();
+    const timeStr = now.toTimeString().split(' ')[0] + '.' + Math.floor(now.getMilliseconds() / 10);
+    
+    let badgeColor = 'bg-tertiary-fixed-dim/30 text-tertiary-fixed-dim';
+    let icon = 'info';
+    let level = 'CAUTION';
+
+    if (type === 'critical' || type === 'temp') {
+      badgeColor = 'bg-error-container/30 text-error';
+      icon = 'warning';
+      level = 'CRITICAL';
+    } else if (type === 'bus' || type === 'lidar') {
+      badgeColor = 'bg-surface-container-high text-primary-container';
+      icon = 'sensors_off';
+      level = 'INJECTED';
+    }
+
+    const card = document.createElement('div');
+    card.className = 'flex items-start gap-space-sm p-space-sm rounded bg-surface-container animate-pulse';
+    card.innerHTML = `
+      <div class="w-7 h-7 rounded ${badgeColor} flex items-center justify-center shrink-0 mt-0.5">
+        <span class="material-symbols-outlined text-[18px]">${icon}</span>
+      </div>
+      <div class="flex flex-col min-w-0">
+        <div class="flex items-center gap-space-xs">
+          <span class="font-label-caps text-label-caps font-bold ${badgeColor.split(' ')[1]}">${level}</span>
+          <span class="font-telemetry-sm text-body-sm text-on-surface-variant">${timeStr}</span>
+        </div>
+        <p class="font-body-md text-body-md text-on-surface mt-0.5">
+          Dynamic injection activated: <strong>${name}</strong> perturbing simulation loop.
+        </p>
+      </div>
+    `;
+    stream.prepend(card);
+
+    // Adjust Recovery percentage downwards slightly
+    const recFill = document.getElementById('recovery-fill');
+    const recText = document.getElementById('recovery-percent');
+    if (recFill && recText) {
+      recFill.style.width = '62%';
+      recText.textContent = '62% Dynamic Adjusting';
+      recText.className = 'font-telemetry-sm text-telemetry-sm text-tertiary-fixed-dim font-bold';
+      recFill.className = 'h-full bg-tertiary-fixed-dim transition-all duration-500 rounded';
+    }
+  }
+
+  function triggerCocktail() {
+    triggerFault('Regen Failure', 'critical');
+    setTimeout(() => triggerFault('Black Ice', 'friction'), 300);
+    setTimeout(() => triggerFault('HVAC Surge', 'drain'), 600);
+  }
+
+  function clearAllFaults() {
+    const pills = document.getElementById('active-pills-stream');
+    if (pills) {
+      pills.innerHTML = `
+        <div class="flex items-center gap-1.5 px-space-sm py-1 rounded bg-secondary-container/40 text-secondary shadow-sm">
+          <span class="material-symbols-outlined text-[16px]">check_circle</span>
+          <span class="font-label-caps text-label-caps font-bold">ALL PERTURBATIONS FLUSHED</span>
+        </div>
+      `;
+    }
+    const recFill = document.getElementById('recovery-fill');
+    const recText = document.getElementById('recovery-percent');
+    if (recFill && recText) {
+      recFill.style.width = '100%';
+      recText.textContent = '100% Fully Nominal';
+      recText.className = 'font-telemetry-sm text-telemetry-sm text-secondary font-bold';
+      recFill.className = 'h-full bg-secondary transition-all duration-500 rounded';
+    }
+  }
+
+  function applyCopilotStrategy() {
+    const btn = document.getElementById('btn-apply-strategy');
+    if (btn) {
+      btn.innerHTML = `<span class="material-symbols-outlined text-[18px]">done_all</span> STRATEGY APPLIED`;
+      btn.className = btn.className.replace('bg-primary-container', 'bg-secondary-container text-on-secondary');
+    }
+    const recFill = document.getElementById('recovery-fill');
+    const recText = document.getElementById('recovery-percent');
+    if (recFill && recText) {
+      recFill.style.width = '94%';
+      recText.textContent = '94% Stabilized (AI Guard)';
+      recText.className = 'font-telemetry-sm text-telemetry-sm text-secondary font-bold';
+      recFill.className = 'h-full bg-secondary transition-all duration-500 rounded';
+    }
+  }
+
+  function simulateAlternative() {
+    alert("Simulating Profile B: Regenerative Brake Pre-load with Inverter Passive Bleed. Estimated recovery: 6.8m.");
+  }
+
+  function switchJsonTab(tab) {
+    const pView = document.getElementById('json-view-pipeline');
+    const rView = document.getElementById('json-view-raw');
+    const pTab = document.getElementById('tab-pipeline');
+    const rTab = document.getElementById('tab-raw');
+
+    if (tab === 'pipeline') {
+      pView.classList.remove('hidden');
+      pView.classList.add('flex');
+      rView.classList.add('hidden');
+      rView.classList.remove('flex');
+      pTab.className = "flex-1 py-1 rounded bg-surface-container font-label-caps text-label-caps text-primary-container text-center font-bold";
+      rTab.className = "flex-1 py-1 rounded font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface text-center";
+    } else {
+      rView.classList.remove('hidden');
+      rView.classList.add('flex');
+      pView.classList.add('hidden');
+      pView.classList.remove('flex');
+      rTab.className = "flex-1 py-1 rounded bg-surface-container font-label-caps text-label-caps text-primary-container text-center font-bold";
+      pTab.className = "flex-1 py-1 rounded font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface text-center";
+    }
+  }
+
+  function copyPayload() {
+    const lbl = document.getElementById('copy-label');
+    if (lbl) {
+      lbl.textContent = 'COPIED!';
+      setTimeout(() => { lbl.textContent = 'COPY'; }, 1500);
+    }
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_16px_rgba(0,0,0,0.4)]" data-active-classes="text-primary-container bg-surface-container-high/80"><div class="flex justify-between items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-1 py-1 rounded text-on-surface-variant hover:text-on-surface transition-colors flex-1" data-path="hud-vehicle-stage" href="#"><span class="material-symbols-outlined text-[20px]">speed</span><span class="font-label-caps text-[9px] uppercase tracking-normal mt-0.5 truncate">HUD Stage</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-1 py-1 rounded text-on-surface-variant hover:text-on-surface transition-colors flex-1" data-path="battery-strain-telemetry" href="#"><span class="material-symbols-outlined text-[20px]">battery_charging_full</span><span class="font-label-caps text-[9px] uppercase tracking-normal mt-0.5 truncate">Strain</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-1 py-1 rounded text-on-surface-variant hover:text-on-surface transition-colors flex-1" data-path="digital-twin-radar" href="#"><span class="material-symbols-outlined text-[20px]">radar</span><span class="font-label-caps text-[9px] uppercase tracking-normal mt-0.5 truncate">Twin Radar</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-1 py-1 rounded transition-colors flex-1 text-primary-container bg-surface-container-high/80" data-path="chaos-injection-alerts" href="#"><span class="material-symbols-outlined text-[20px]">warning</span><span class="font-label-caps text-[9px] uppercase tracking-normal mt-0.5 truncate">Chaos</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-1 py-1 rounded text-on-surface-variant hover:text-on-surface transition-colors flex-1" data-path="copilot-ai-json-inspector" href="#"><span class="material-symbols-outlined text-[20px]">terminal</span><span class="font-label-caps text-[9px] uppercase tracking-normal mt-0.5 truncate">Copilot</span></a></div></nav></body></html>

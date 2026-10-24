@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #10131a;
+  --color-surface-dim: #10131a;
+  --color-surface-bright: #363941;
+  --color-surface-container-lowest: #0b0e15;
+  --color-surface-container-low: #191b23;
+  --color-surface-container: #1d1f27;
+  --color-surface-container-high: #272a32;
+  --color-surface-container-highest: #32353d;
+  --color-surface-variant: #32353d;
+
+  --color-on-surface: #e1e2ec;
+  --color-on-surface-variant: #b9cacb;
+  --color-inverse-surface: #e1e2ec;
+  --color-inverse-on-surface: #2d3038;
+
+  --color-outline: #849495;
+  --color-outline-variant: #3a494b;
+  --color-surface-tint: #00dce6;
+
+  --color-primary: #e0fdff;
+  --color-on-primary: #00373a;
+  --color-primary-container: #00f2fe;
+  --color-on-primary-container: #006a70;
+  --color-inverse-primary: #00696f;
+
+  --color-secondary: #4edea3;
+  --color-on-secondary: #003824;
+  --color-secondary-container: #00a572;
+  --color-on-secondary-container: #00311f;
+
+  --color-tertiary: #fff5ee;
+  --color-on-tertiary: #472a00;
+  --color-tertiary-container: #ffd3a1;
+  --color-on-tertiary-container: #875400;
+
+  --color-error: #ffb4ab;
+  --color-on-error: #690005;
+  --color-error-container: #93000a;
+  --color-on-error-container: #ffdad6;
+
+  --color-primary-fixed: #6ff6ff;
+  --color-primary-fixed-dim: #00dce6;
+  --color-on-primary-fixed: #002022;
+  --color-on-primary-fixed-variant: #004f53;
+
+  --color-secondary-fixed: #6ffbbe;
+  --color-secondary-fixed-dim: #4edea3;
+  --color-on-secondary-fixed: #002113;
+  --color-on-secondary-fixed-variant: #005236;
+
+  --color-tertiary-fixed: #ffddb8;
+  --color-tertiary-fixed-dim: #ffb95f;
+  --color-on-tertiary-fixed: #2a1700;
+  --color-on-tertiary-fixed-variant: #653e00;
+
+  --color-background: #10131a;
+  --color-on-background: #e1e2ec;
+
+  --font-headline-lg: "Space Grotesk", sans-serif;
+  --font-headline-md: "Space Grotesk", sans-serif;
+  --font-headline-sm: "Space Grotesk", sans-serif;
+  --font-display-lg: "Space Grotesk", sans-serif;
+  --font-display-lg-mobile: "Space Grotesk", sans-serif;
+  --font-body-lg: "Inter", sans-serif;
+  --font-body-md: "Inter", sans-serif;
+  --font-body-sm: "Inter", sans-serif;
+  --font-telemetry-xl: "JetBrains Mono", monospace;
+  --font-telemetry-md: "JetBrains Mono", monospace;
+  --font-telemetry-sm: "JetBrains Mono", monospace;
+  --font-label-caps: "JetBrains Mono", monospace;
+
+  --spacing-space-xs: 0.25rem;
+  --spacing-space-sm: 0.5rem;
+  --spacing-space-md: 1rem;
+  --spacing-space-lg: 1.5rem;
+  --spacing-space-xl: 2.5rem;
+}
+
+@layer base {
+  html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #10131a;
+    color: #e1e2ec;
+    font-family: "Inter", sans-serif;
+  }
+  body {
+    overscroll-behavior: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  .pt-safe {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+}
+
+/* Custom telemetry fonts */
+.font-label-caps {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  line-height: 14px;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+}
+
+.font-telemetry-xl {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 36px;
+  line-height: 40px;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+.font-telemetry-md {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+.font-telemetry-sm {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 500;
+}
+
+.font-headline-sm {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+.font-headline-md {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 600;
+}
+
+/* Hide scrollbar for neat telemetry look */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

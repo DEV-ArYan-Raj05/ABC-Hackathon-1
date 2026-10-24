@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-secondary-fixed-variant": "#005236", "primary-fixed": "#6ff6ff", "on-tertiary-fixed": "#2a1700", "on-primary-container": "#006a70", "outline-variant": "#3a494b", "surface": "#10131a", "inverse-on-surface": "#2d3038", "tertiary-fixed-dim": "#ffb95f", "on-tertiary-container": "#875400", "surface-container-high": "#272a32", "inverse-primary": "#00696f", "secondary": "#4edea3", "inverse-surface": "#e1e2ec", "on-surface": "#e1e2ec", "surface-container-low": "#191b23", "on-secondary-container": "#00311f", "surface-tint": "#00dce6", "surface-container": "#1d1f27", "on-secondary-fixed": "#002113", "on-error": "#690005", "tertiary": "#fff5ee", "on-tertiary-fixed-variant": "#653e00", "on-error-container": "#ffdad6", "on-tertiary": "#472a00", "error": "#ffb4ab", "secondary-container": "#00a572", "tertiary-container": "#ffd3a1", "surface-container-lowest": "#0b0e15", "on-surface-variant": "#b9cacb", "secondary-fixed": "#6ffbbe", "primary-fixed-dim": "#00dce6", "surface-dim": "#10131a", "error-container": "#93000a", "surface-bright": "#363941", "outline": "#849495", "tertiary-fixed": "#ffddb8", "on-primary-fixed": "#002022", "secondary-fixed-dim": "#4edea3", "primary": "#e0fdff", "surface-container-highest": "#32353d", "on-primary": "#00373a", "on-primary-fixed-variant": "#004f53", "on-background": "#e1e2ec", "primary-container": "#00f2fe", "background": "#10131a", "on-secondary": "#003824", "surface-variant": "#32353d" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "space-md": "1rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "space-xl": "2.5rem", "margin-desktop": "2rem", "margin": "1rem", "gutter": "1rem", "gutter-desktop": "1.5rem" }, fontFamily: { "telemetry-xl": ["JetBrains Mono"], "headline-lg": ["Space Grotesk"], "body-sm": ["Inter"], "display-lg": ["Space Grotesk"], "body-lg": ["Inter"], "headline-md": ["Space Grotesk"], "telemetry-sm": ["JetBrains Mono"], "body-md": ["Inter"], "telemetry-md": ["JetBrains Mono"], "label-caps": ["JetBrains Mono"], "display-lg-mobile": ["Space Grotesk"], "headline-sm": ["Space Grotesk"] }, fontSize: { "telemetry-xl": ["36px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700" }], "headline-lg": ["30px", { lineHeight: "38px", letterSpacing: "-0.02em", fontWeight: "600" }], "body-sm": ["12px", { lineHeight: "18px", fontWeight: "400" }], "display-lg": ["48px", { lineHeight: "56px", letterSpacing: "-0.03em", fontWeight: "700" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }], "headline-md": ["22px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600" }], "telemetry-sm": ["13px", { lineHeight: "16px", fontWeight: "500" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }], "telemetry-md": ["18px", { lineHeight: "24px", fontWeight: "600" }], "label-caps": ["11px", { lineHeight: "14px", letterSpacing: "0.12em", fontWeight: "600" }], "display-lg-mobile": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700" }], "headline-sm": ["18px", { lineHeight: "24px", fontWeight: "600" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface antialiased min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_16px_rgba(0,242,254,0.06)]"><div class="h-20 px-space-md flex flex-col justify-between py-space-xs"><div class="flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="EV Intelligence Telemetry Emblem" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WoFiW6rtSjSD_m2iyq9Sga0Sr94lnAJai7JZUyJ48G9l9HrtrH37q15xjRl3K4SM8m-33KgCosYfqZ-VAc0R1NWh3CM5ROtCv_MvddeqiG5BpNx7V1C_EpRE8ldm5FNEl8ROdW685-r1_UGmxIQ6dExtKd3k-7tR08gnzkuhKQmozBQNUpzYQsFPxaZ0ButlfaT3EJg_WGcwAord4zlezm1jV_pNCcDyR7p5ntUBObrNDYRNj406Hl3B5L"/><div class="flex flex-col"><span class="font-label-caps text-label-caps text-primary-container tracking-widest uppercase">EV TELEMETRY LAB</span><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">Battery Strain Telemetry</span></div></div><div class="flex items-center gap-space-sm"><div class="hidden sm:flex items-center gap-1.5 px-space-xs py-0.5 rounded bg-surface-container-high/60"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span><span class="font-label-caps text-label-caps text-secondary uppercase">LINK ACTIVE</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="flex items-center justify-between gap-space-xs overflow-x-auto no-scrollbar"><div class="flex items-center gap-1.5 shrink-0"><span class="px-1.5 py-0.5 rounded bg-surface-container-high font-label-caps text-label-caps text-secondary flex items-center gap-1"><span class="w-1 h-1 rounded-full bg-secondary"></span>READY</span><span class="px-1.5 py-0.5 rounded bg-surface-container-high font-label-caps text-label-caps text-on-surface-variant">2Hz TICK</span><span class="px-1.5 py-0.5 rounded bg-surface-container-high font-label-caps text-label-caps text-primary-container">PRESET: ALPHA_WLTP</span></div><div class="flex items-center gap-1 bg-surface-container-lowest/80 p-0.5 rounded shrink-0"><button class="px-2 py-0.5 font-label-caps text-label-caps rounded bg-primary-container text-on-primary-container font-bold min-h-[24px]">1X</button><button class="px-2 py-0.5 font-label-caps text-label-caps rounded text-on-surface-variant hover:text-on-surface min-h-[24px]">4X</button><button class="px-2 py-0.5 font-label-caps text-label-caps rounded text-on-surface-variant hover:text-on-surface min-h-[24px]">10X</button></div></div></div></header><main class="flex flex-col relative w-full bg-surface pt-20 pb-20"><div class="flex flex-col w-full px-space-md py-space-sm gap-space-md">
+<!-- TOP TELEMETRY STATUS BAR -->
+<div class="flex items-center justify-between bg-surface-container-low px-space-sm py-space-xs rounded-xl shadow-md">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim animate-ping shrink-0"></span>
+<span class="font-label-caps text-label-caps text-tertiary-fixed-dim truncate">// PACK_BMS_TELEMETRY :: BUS_CAN_01</span>
+</div>
+<div class="flex items-center gap-space-xs shrink-0">
+<span class="px-space-xs py-0.5 rounded bg-surface-container font-label-caps text-[10px] text-on-surface-variant">BUF: 60s @ 10Hz</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high font-label-caps text-[10px] text-secondary">ACTIVE SYNC</span>
+</div>
+</div>
+<!-- SECTION 1: MASTER STRAIN & CORE HEALTH HUD CARD -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-xl relative overflow-hidden">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[18px]">electric_meter</span>
+<span class="font-label-caps text-label-caps text-on-surface tracking-wider uppercase">Master Pack Strain Index</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-tertiary-container/20 text-on-tertiary-container font-label-caps text-label-caps uppercase">CAUTION AMBER</span>
+</div>
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-md py-space-xs">
+<!-- Arc Meter SVG -->
+<div class="relative flex items-center justify-center shrink-0 w-44 h-44">
+<svg class="w-full h-full -rotate-90" viewbox="0 0 120 120">
+<!-- Background track -->
+<circle class="text-surface-container-high" cx="60" cy="60" fill="none" r="48" stroke="currentColor" stroke-dasharray="301.6" stroke-dashoffset="60.3" stroke-linecap="round" stroke-width="8"></circle>
+<!-- Active Strain Arc (74%) -->
+<circle class="text-tertiary-fixed-dim" cx="60" cy="60" fill="none" r="48" stroke="currentColor" stroke-dasharray="301.6" stroke-dashoffset="122" stroke-linecap="round" stroke-width="8"></circle>
+<!-- Nominal Range Guide -->
+<circle class="text-primary-container" cx="60" cy="60" fill="none" opacity="0.3" r="48" stroke="currentColor" stroke-dasharray="301.6" stroke-dashoffset="240" stroke-linecap="round" stroke-width="8"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+<span class="font-telemetry-xl text-telemetry-xl text-tertiary-fixed-dim tracking-tighter">74<span class="text-base text-on-surface-variant font-telemetry-sm">%</span></span>
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest mt-0.5">PACK STRAIN</span>
+<span class="font-body-sm text-[10px] text-tertiary-fixed-dim mt-0.5 flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">trending_up</span>+3.8%/min
+          </span>
+</div>
+</div>
+<!-- Strain Diagnostic Breakdown -->
+<div class="grid grid-cols-2 gap-space-xs w-full">
+<!-- Power limit -->
+<div class="bg-surface-container rounded-lg p-space-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase">Power Limit</span>
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[14px]">thermostat</span>
+</div>
+<div class="mt-space-xs">
+<span class="font-telemetry-md text-telemetry-md text-on-surface">82<span class="text-xs text-on-surface-variant font-telemetry-sm">%</span></span>
+<p class="font-body-sm text-[10px] text-on-surface-variant mt-0.5 leading-tight">Thermal derate active (-18%)</p>
+</div>
+</div>
+<!-- C-Rate Peak -->
+<div class="bg-surface-container rounded-lg p-space-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase">Peak C-Rate</span>
+<span class="font-label-caps text-[9px] text-error">MAX 2.8C</span>
+</div>
+<div class="mt-space-xs">
+<span class="font-telemetry-md text-telemetry-md text-primary-container">2.4<span class="text-xs text-on-surface-variant font-telemetry-sm">C</span></span>
+<div class="w-full bg-surface-container-highest h-1 rounded-full mt-1.5 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 85.7%"></div>
+</div>
+</div>
+</div>
+<!-- State of Charge -->
+<div class="bg-surface-container rounded-lg p-space-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase">State of Charge</span>
+<span class="material-symbols-outlined text-secondary text-[14px]">battery_horiz_075</span>
+</div>
+<div class="mt-space-xs">
+<span class="font-telemetry-md text-telemetry-md text-secondary">64.2<span class="text-xs text-on-surface-variant font-telemetry-sm">%</span></span>
+<p class="font-body-sm text-[10px] text-on-surface-variant mt-0.5 leading-tight">Est. 342 km buffer</p>
+</div>
+</div>
+<!-- Delta Spread -->
+<div class="bg-surface-container rounded-lg p-space-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase">Cell Δ Spread</span>
+<span class="font-label-caps text-[9px] text-secondary">NOMINAL</span>
+</div>
+<div class="mt-space-xs">
+<span class="font-telemetry-md text-telemetry-md text-on-surface">0.024<span class="text-xs text-on-surface-variant font-telemetry-sm">V</span></span>
+<p class="font-body-sm text-[10px] text-on-surface-variant mt-0.5 leading-tight">Min 3.821 / Max 3.845</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 2: ROLLING 60S TELEMETRY CHARTS (4-PANE HUD VISUALIZATION) -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between px-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-[18px]">show_chart</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Rolling 60s Dynamic Vectors</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant">T-MINUS 60s → LIVE</span>
+</div>
+<!-- Chart 1: Power (kW) with Regen Underflow Glow -->
+<div class="bg-surface-container-low rounded-xl p-space-sm shadow-md flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+<span class="font-label-caps text-label-caps text-on-surface uppercase">Instantaneous Power (kW)</span>
+</div>
+<div class="flex items-center gap-space-sm font-telemetry-sm text-telemetry-sm">
+<span class="text-secondary">-42 kW (Regen)</span>
+<span class="text-primary-container font-bold">+286 kW (Peak)</span>
+</div>
+</div>
+<!-- Vector SVG Stream -->
+<div class="relative w-full h-28 bg-surface-container-lowest rounded-lg overflow-hidden flex items-center justify-center p-1">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 320 80">
+<defs>
+<lineargradient id="powerGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#00f2fe" stop-opacity="0.3"></stop>
+<stop offset="65%" stop-color="#00f2fe" stop-opacity="0.0"></stop>
+<stop offset="100%" stop-color="#4edea3" stop-opacity="0.3"></stop>
+</lineargradient>
+</defs>
+<!-- Zero Line Grid Indicator -->
+<line stroke="#32353d" stroke-dasharray="2 2" stroke-width="1" x1="0" x2="320" y1="52" y2="52"></line>
+<text fill="#849495" font-family="JetBrains Mono" font-size="7" x="6" y="50">0 kW (REST/FLOAT)</text>
+<!-- Area fill with Regen floor -->
+<polygon fill="url(#powerGrad)" points="0,52 10,48 24,52 40,30 55,22 72,40 90,52 110,68 125,72 140,52 165,24 185,14 205,34 225,52 245,66 260,52 280,20 300,16 320,38 320,52"></polygon>
+<!-- Main fluctuating path -->
+<path d="M0,52 L10,48 L24,52 L40,30 L55,22 L72,40 L90,52 L110,68 L125,72 L140,52 L165,24 L185,14 L205,34 L225,52 L245,66 L260,52 L280,20 L300,16 L320,38" fill="none" stroke="#00f2fe" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<!-- Live Telemetry Pinhole -->
+<circle class="animate-ping" cx="320" cy="38" fill="#00f2fe" r="3.5"></circle>
+<circle cx="320" cy="38" fill="#e0fdff" r="2.5"></circle>
+</svg>
+</div>
+<div class="flex items-center justify-between font-label-caps text-[9px] text-on-surface-variant px-1">
+<span>-60 SEC</span>
+<span>-30 SEC</span>
+<span class="text-secondary font-bold">▼ REGEN BRAKING PHASE</span>
+<span class="text-primary-container">NOW (LIVE)</span>
+</div>
+</div>
+<!-- Dual Metric Row: Wh/km + Pack Temp Trendline -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<!-- Energy Efficiency Wh/km -->
+<div class="bg-surface-container-low rounded-xl p-space-sm shadow-md flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-caps text-label-caps text-on-surface uppercase">Efficiency (Wh/km)</span>
+<span class="font-telemetry-sm text-telemetry-sm text-tertiary-fixed-dim">218 <span class="text-[10px] text-on-surface-variant">LIVE</span></span>
+</div>
+<div class="w-full h-20 bg-surface-container-lowest rounded-lg p-1 relative overflow-hidden">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 160 50">
+<!-- Benchmark line (160 Wh/km) -->
+<line stroke="#4edea3" stroke-dasharray="3 3" stroke-width="1" x1="0" x2="160" y1="34" y2="34"></line>
+<text fill="#4edea3" font-family="JetBrains Mono" font-size="6" x="4" y="32">TARGET 160 Wh/km</text>
+<!-- Actual line -->
+<path d="M0,40 Q30,38 50,30 T100,20 T130,24 T160,14" fill="none" stroke="#ffb95f" stroke-width="1.8"></path>
+<circle cx="160" cy="14" fill="#ffb95f" r="2"></circle>
+</svg>
+</div>
+<span class="font-body-sm text-[10px] text-tertiary-fixed-dim mt-space-xs flex items-center justify-between">
+<span>Target Drift: +36.2%</span>
+<span class="font-label-caps text-[9px] text-on-surface-variant">HEATING IMPACT</span>
+</span>
+</div>
+<!-- Pack Temperature Trendline with Throttle Ceiling -->
+<div class="bg-surface-container-low rounded-xl p-space-sm shadow-md flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-caps text-label-caps text-on-surface uppercase">Thermal Ascent</span>
+<span class="font-telemetry-sm text-telemetry-sm text-error">42.8°C</span>
+</div>
+<div class="w-full h-20 bg-surface-container-lowest rounded-lg p-1 relative overflow-hidden">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 160 50">
+<!-- Critical Throttle 45C Threshold -->
+<line stroke="#ffb4ab" stroke-dasharray="2 2" stroke-width="1" x1="0" x2="160" y1="12" y2="12"></line>
+<text fill="#ffb4ab" font-family="JetBrains Mono" font-size="6" x="4" y="10">DERATE TRIP 45.0°C</text>
+<!-- Ascent Curve -->
+<path d="M0,42 C40,38 70,32 100,26 C125,21 145,16 160,14" fill="none" stroke="#ef4444" stroke-width="2"></path>
+<circle class="animate-pulse" cx="160" cy="14" fill="#ef4444" r="2.5"></circle>
+</svg>
+</div>
+<span class="font-body-sm text-[10px] text-on-surface-variant mt-space-xs flex items-center justify-between">
+<span>Started: 28.0°C</span>
+<span class="text-error font-label-caps text-[9px]">MARGIN: +2.2°C AVAIL</span>
+</span>
+</div>
+</div>
+<!-- SoC Depletion & Estimated Range Curve -->
+<div class="bg-surface-container-low rounded-xl p-space-sm shadow-md flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface uppercase">SoC Depletion Vector &amp; Range Projections</span>
+<span class="font-telemetry-sm text-telemetry-sm text-secondary">Slope: -0.18%/min</span>
+</div>
+<div class="relative w-full h-16 bg-surface-container-lowest rounded-lg overflow-hidden flex items-center justify-center p-1">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 320 40">
+<!-- Range corridor bands -->
+<polygon fill="#00dce6" opacity="0.08" points="0,10 320,32 320,38 0,16"></polygon>
+<line stroke="#4edea3" stroke-width="1.5" x1="0" x2="320" y1="12" y2="34"></line>
+<circle cx="320" cy="34" fill="#4edea3" r="2"></circle>
+<text fill="#849495" font-family="JetBrains Mono" font-size="7" x="8" y="24">STEADY EXTRAPOLATION: 312 KM CUTOFF</text>
+</svg>
+</div>
+</div>
+</div>
+<!-- SECTION 3: 96-CELL MODULE MATRIX MINI-GRID PREVIEW (12x8) -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-[18px]">grid_view</span>
+<div>
+<span class="font-label-caps text-label-caps text-on-surface block uppercase">96-Cell Pack Matrix View</span>
+<span class="font-body-sm text-[10px] text-on-surface-variant">12 x 8 Architecture • Cell Level Thermistor Feed</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="flex items-center gap-1 font-label-caps text-[9px] text-on-surface-variant">
+<span class="w-2 h-2 rounded bg-primary-container"></span> 38°C
+        </span>
+<span class="flex items-center gap-1 font-label-caps text-[9px] text-on-surface-variant">
+<span class="w-2 h-2 rounded bg-tertiary-fixed-dim"></span> 42°C
+        </span>
+<span class="flex items-center gap-1 font-label-caps text-[9px] text-on-surface-variant">
+<span class="w-2 h-2 rounded bg-error"></span> 46°C
+        </span>
+</div>
+</div>
+<!-- 12 x 8 Heatmap Canvas Visual Mock -->
+<div class="bg-surface-container-lowest p-space-xs rounded-lg overflow-x-auto no-scrollbar">
+<div class="grid grid-cols-12 gap-1 min-w-[280px]">
+<!-- Row 1 -->
+<div class="h-3.5 rounded bg-primary-container/70" title="Cell 01: 37.8C"></div>
+<div class="h-3.5 rounded bg-primary-container/80" title="Cell 02: 38.1C"></div>
+<div class="h-3.5 rounded bg-primary-container/80"></div>
+<div class="h-3.5 rounded bg-primary-container/75"></div>
+<div class="h-3.5 rounded bg-primary-container/80"></div>
+<div class="h-3.5 rounded bg-primary-container/85"></div>
+<div class="h-3.5 rounded bg-primary-container/90"></div>
+<div class="h-3.5 rounded bg-primary-container/75"></div>
+<div class="h-3.5 rounded bg-primary-container/80"></div>
+<div class="h-3.5 rounded bg-primary-container/80"></div>
+<div class="h-3.5 rounded bg-primary-container/70"></div>
+<div class="h-3.5 rounded bg-primary-container/70"></div>
+<!-- Row 2 -->
+<div class="h-3.5 rounded bg-primary-container/80"></div>
+<div class="h-3.5 rounded bg-primary-container/85"></div>
+<div class="h-3.5 rounded bg-primary-container/85"></div>
+<div class="h-3.5 rounded bg-primary-container/90"></div>
+<div class="h-3.5 rounded bg-primary-container/90"></div>
+<div class="h-3.5 rounded bg-tertiary-fixed-dim/70"></div>
+<div class="h-3.5 rounded bg-tertiary-fixed-dim/80"></div>
+<div class="h-3.5 rounded bg-primary-container/90"></div>
+<div class="h-3.5 rounded bg-primary-container/80"></div>
+<div class="h-3.5 rounded bg-primary-container/80"></div>
+<div class="h-3.5 rounded bg-primary-container/75"></div>
+<div class="h-3.5 rounded bg-primary-container/70"></div>
+<!-- Row 3 -->
+<div class="h-3.5 rounded bg-primary-container/80"></div>
+<div class="h-3.5 rounded bg-primary-container/80"></div>
+<div class="h-3.5 rounded bg-primary-container/85"></div>
+<!-- Module 4 Hotspot Cluster (Cells 28-32) -->
+<div class="h-3.5 rounded bg-tertiary-fixed-dim"></div>
+<div class="h-3.5 rounded bg-error animate-pulse" title="M4-C29: 46.2C HOTSPOT"></div>
+<div class="h-3.5 rounded bg-error animate-pulse" title="M4-C30: 46.0C HOTSPOT"></div>
+<div class="h-3.5 rounded bg-tertiary-fixed-dim"></div>
+<div class="h-3.5 rounded bg-primary-container/90"></div>
+<div class="h-3.5 rounded bg-primary-container/80"></div>
+<div class="h-3.5 rounded bg-primary-container/80"></div>
+<div class="h-3.5 rounded bg-primary-container/75"></div>
+<div class="h-3.5 rounded bg-primary-container/70"></div>
+<!-- Row 4 -->
+<div class="h-3.5 rounded bg-primary-container/70"></div>
+<div class="h-3.5 rounded bg-primary-container/80"></div>
+<div class="h-3.5 rounded bg-primary-container/85"></div>
+<div class="h-3.5 rounded bg-tertiary-fixed-dim/90"></div>
+<div class="h-3.5 rounded bg-error" title="M4-C41: 45.8C HOTSPOT"></div>
+<div class="h-3.5 rounded bg-tertiary-fixed-dim/90"></div>
+<div class="h-3.5 rounded bg-tertiary-fixed-dim/75"></div>
+<div class="h-3.5 rounded bg-primary-container/85"></div>
+<div class="h-3.5 rounded bg-primary-container/80"></div>
+<div class="h-3.5 rounded bg-primary-container/75"></div>
+<div class="h-3.5 rounded bg-primary-container/70"></div>
+<div class="h-3.5 rounded bg-primary-container/70"></div>
+<!-- Row 5 -->
+<div class="h-3.5 rounded bg-primary-container/75"></div>
+<div class="h-3.5 rounded bg-primary-container/80"></div>
+<div class="h-3.5 rounded bg-primary-container/80"></div>
+<div class="h-3.5 rounded bg-primary-container/85"></div>
+<div class="h-3.5 rounded bg-tertiary-fixed-dim/70"></div>
+<div class="h-3.5 rounded bg-primary-container/85"></div>
+<div class="h-3.5 rounded bg-primary-container/80"></div>
+<div class="h-3.5 rounded bg-primary-container/80"></div>
+<div class="h-3.5 rounded bg-primary-container/80"></div>
+<div class="h-3.5 rounded bg-primary-container/75"></div>
+<div class="h-3.5 rounded bg-primary-container/75"></div>
+<div class="h-3.5 rounded bg-primary-container/70"></div>
+<!-- Row 6 -->
+<div class="h-3.5 rounded bg-primary-container/70"></div>
+<div class="h-3.5 rounded bg-primary-container/75"></div>
+<div class="h-3.5 rounded bg-primary-container/80"></div>
+<div class="h-3.5 rounded bg-primary-container/80"></div>
+<div class="h-3.5 rounded bg-primary-container/80"></div>
+<div class="h-3.5 rounded bg-primary-container/85"></div>
+<div class="h-3.5 rounded bg-primary-container/85"></div>
+<div class="h-3.5 rounded bg-primary-container/80"></div>
+<div class="h-3.5 rounded bg-primary-container/75"></div>
+<div class="h-3.5 rounded bg-primary-container/75"></div>
+<div class="h-3.5 rounded bg-primary-container/70"></div>
+<div class="h-3.5 rounded bg-primary-container/70"></div>
+<!-- Row 7 -->
+<div class="h-3.5 rounded bg-primary-container/70"></div>
+<div class="h-3.5 rounded bg-primary-container/75"></div>
+<div class="h-3.5 rounded bg-primary-container/75"></div>
+<div class="h-3.5 rounded bg-primary-container/80"></div>
+<div class="h-3.5 rounded bg-primary-container/80"></div>
+<div class="h-3.5 rounded bg-primary-container/80"></div>
+<div class="h-3.5 rounded bg-primary-container/80"></div>
+<div class="h-3.5 rounded bg-primary-container/75"></div>
+<div class="h-3.5 rounded bg-primary-container/75"></div>
+<div class="h-3.5 rounded bg-primary-container/70"></div>
+<div class="h-3.5 rounded bg-primary-container/70"></div>
+<div class="h-3.5 rounded bg-primary-container/65"></div>
+<!-- Row 8 -->
+<div class="h-3.5 rounded bg-primary-container/65"></div>
+<div class="h-3.5 rounded bg-primary-container/70"></div>
+<div class="h-3.5 rounded bg-primary-container/70"></div>
+<div class="h-3.5 rounded bg-primary-container/75"></div>
+<div class="h-3.5 rounded bg-primary-container/75"></div>
+<div class="h-3.5 rounded bg-primary-container/75"></div>
+<div class="h-3.5 rounded bg-primary-container/75"></div>
+<div class="h-3.5 rounded bg-primary-container/70"></div>
+<div class="h-3.5 rounded bg-primary-container/70"></div>
+<div class="h-3.5 rounded bg-primary-container/65"></div>
+<div class="h-3.5 rounded bg-primary-container/65"></div>
+<div class="h-3.5 rounded bg-primary-container/60"></div>
+</div>
+</div>
+<!-- Anomaly summary bar & Action -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-space-xs pt-space-xs">
+<div class="flex items-center gap-space-xs text-error">
+<span class="material-symbols-outlined text-[16px]">warning</span>
+<span class="font-body-sm text-[11px] font-medium leading-none">HOTSPOT DETECTED: MODULE_04 [CELL_29/30 @ 46.2°C]</span>
+</div>
+<button class="bg-surface-container-high hover:bg-surface-bright text-primary-container px-space-md py-1.5 rounded-lg font-label-caps text-label-caps uppercase flex items-center justify-center gap-1 transition-colors">
+<span>Open Full Cell Matrix</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- SECTION 4: THERMAL MANAGEMENT SUBSYSTEMS STATUS -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">ac_unit</span>
+<span class="font-label-caps text-label-caps text-on-surface uppercase">Thermal Management Active Actuators</span>
+</div>
+<span class="font-label-caps text-[10px] text-secondary bg-surface-container px-2 py-0.5 rounded">LOOP: GLYCOL 50/50</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-xs">
+<!-- Coolant Pump -->
+<div class="bg-surface-container rounded-lg p-space-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase">Coolant Flow</span>
+<span class="material-symbols-outlined text-primary-container text-[16px] animate-spin">cyclone</span>
+</div>
+<div>
+<span class="font-telemetry-md text-telemetry-md text-on-surface">14.2 <span class="text-xs text-on-surface-variant font-telemetry-sm">L/min</span></span>
+<div class="flex items-center justify-between font-body-sm text-[10px] text-on-surface-variant mt-1">
+<span>90% Duty Cycle</span>
+<span class="text-primary-container">4,200 RPM</span>
+</div>
+</div>
+</div>
+<!-- Heat Pump -->
+<div class="bg-surface-container rounded-lg p-space-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase">Heat Pump Mode</span>
+<span class="material-symbols-outlined text-primary-container text-[16px]">mode_fan</span>
+</div>
+<div>
+<span class="font-telemetry-md text-telemetry-md text-primary-fixed">Active Chilling</span>
+<div class="flex items-center justify-between font-body-sm text-[10px] text-on-surface-variant mt-1">
+<span>Refrigerant Exp.</span>
+<span class="text-tertiary-fixed-dim">High Load</span>
+</div>
+</div>
+</div>
+<!-- BMS State -->
+<div class="bg-surface-container rounded-lg p-space-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase">BMS Node Health</span>
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[16px]">shield_with_heart</span>
+</div>
+<div>
+<span class="font-telemetry-md text-telemetry-md text-on-surface">Nominal*</span>
+<div class="flex items-center justify-between font-body-sm text-[10px] text-error mt-1">
+<span>1 Alert: Thermal M4</span>
+<span class="text-secondary font-label-caps text-[9px]">ISO OK</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 5: GLASS-BOX REAL-TIME JSON PAYLOAD INSPECTOR -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-2xl flex flex-col gap-space-xs relative overflow-hidden">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-[16px]">data_object</span>
+<span class="font-label-caps text-label-caps text-on-surface uppercase">// BMS_STREAM_FRAME_0x7FE</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="px-2 py-0.5 rounded bg-surface-container-high text-primary-container font-label-caps text-[10px] hover:bg-surface-bright transition-colors" id="toggleStreamBtn">PAUSE STREAM</button>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+</div>
+</div>
+<!-- Monospace Obsidian Payload Terminal -->
+<pre class="font-telemetry-sm text-telemetry-sm text-primary-fixed bg-surface-dim/90 p-space-sm rounded-lg overflow-x-auto leading-relaxed max-h-48 scrollbar-thin" id="jsonViewer">{
+  <span class="text-on-surface-variant">"timestamp_epoch_ms"</span>: <span class="text-primary-container">1716298842104</span>,
+  <span class="text-on-surface-variant">"battery_pack_id"</span>: <span class="text-secondary">"HV-96S-400V-ALPHA"</span>,
+  <span class="text-on-surface-variant">"pack_strain_index"</span>: <span class="text-tertiary-fixed-dim">0.7412</span>,
+  <span class="text-on-surface-variant">"thermal_derate_percent"</span>: <span class="text-tertiary-fixed-dim">18.0</span>,
+  <span class="text-on-surface-variant">"c_rate"</span>: {
+    <span class="text-on-surface-variant">"instant"</span>: <span class="text-primary-container">2.41</span>,
+    <span class="text-on-surface-variant">"max_safety_limit"</span>: <span class="text-error">2.80</span>
+  },
+  <span class="text-on-surface-variant">"battery_temp_c"</span>: {
+    <span class="text-on-surface-variant">"pack_mean"</span>: <span class="text-on-surface">42.8</span>,
+    <span class="text-on-surface-variant">"min_cell"</span>: <span class="text-secondary">37.8</span>,
+    <span class="text-on-surface-variant">"max_cell"</span>: <span class="text-error">46.2</span>,
+    <span class="text-on-surface-variant">"hotspot_module"</span>: <span class="text-error">4</span>
+  },
+  <span class="text-on-surface-variant">"cell_voltages_min_max"</span>: [<span class="text-secondary">3.821</span>, <span class="text-secondary">3.845</span>],
+  <span class="text-on-surface-variant">"coolant_loop"</span>: {
+    <span class="text-on-surface-variant">"flow_l_per_min"</span>: <span class="text-primary-container">14.2</span>,
+    <span class="text-on-surface-variant">"duty_cycle"</span>: <span class="text-primary-container">0.90</span>
+  }
+}</pre>
+<div class="flex items-center justify-between text-on-surface-variant font-label-caps text-[9px] pt-0.5">
+<span>CRC32: 0x8C49F1B2</span>
+<span>PAYLOAD: 512 BYTES • 100% INTEGRITY</span>
+</div>
+</div>
+</div>
+<script>
+  // Simple micro-interaction for stream pause/resume in HUD payload
+  const btn = document.getElementById('toggleStreamBtn');
+  const viewer = document.getElementById('jsonViewer');
+  let streaming = true;
+
+  if (btn && viewer) {
+    btn.addEventListener('click', () => {
+      streaming = !streaming;
+      if (!streaming) {
+        btn.textContent = 'RESUME STREAM';
+        btn.classList.add('text-tertiary-fixed-dim');
+      } else {
+        btn.textContent = 'PAUSE STREAM';
+        btn.classList.remove('text-tertiary-fixed-dim');
+      }
+    });
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_16px_rgba(0,0,0,0.4)]" data-active-classes="text-primary-container bg-surface-container-high/80"><div class="flex justify-between items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-1 py-1 rounded text-on-surface-variant hover:text-on-surface transition-colors flex-1" data-path="hud-vehicle-stage" href="#"><span class="material-symbols-outlined text-[20px]">speed</span><span class="font-label-caps text-[9px] uppercase tracking-normal mt-0.5 truncate">HUD Stage</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-1 py-1 rounded transition-colors flex-1 text-primary-container bg-surface-container-high/80" data-path="battery-strain-telemetry" href="#"><span class="material-symbols-outlined text-[20px]">battery_charging_full</span><span class="font-label-caps text-[9px] uppercase tracking-normal mt-0.5 truncate">Strain</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-1 py-1 rounded text-on-surface-variant hover:text-on-surface transition-colors flex-1" data-path="digital-twin-radar" href="#"><span class="material-symbols-outlined text-[20px]">radar</span><span class="font-label-caps text-[9px] uppercase tracking-normal mt-0.5 truncate">Twin Radar</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-1 py-1 rounded text-on-surface-variant hover:text-on-surface transition-colors flex-1" data-path="chaos-injection-alerts" href="#"><span class="material-symbols-outlined text-[20px]">warning</span><span class="font-label-caps text-[9px] uppercase tracking-normal mt-0.5 truncate">Chaos</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-1 py-1 rounded text-on-surface-variant hover:text-on-surface transition-colors flex-1" data-path="copilot-ai-json-inspector" href="#"><span class="material-symbols-outlined text-[20px]">terminal</span><span class="font-label-caps text-[9px] uppercase tracking-normal mt-0.5 truncate">Copilot</span></a></div></nav></body></html>
